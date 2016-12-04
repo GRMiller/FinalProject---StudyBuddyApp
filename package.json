@@ -1,0 +1,36 @@
+{
+  "name": "studybuddyapp",
+  "version": "1.0.0",
+  "description": "final project study buddy app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "browser-sync-spa": "^1.0.3",
+    "connect-browser-sync": "^2.0.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "sass": "^0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GRMiller/StudyBuddyApp.git"
+  },
+  "keywords": [
+    "studybuddyapp",
+    "finalproject"
+  ],
+  "author": "Jones-Kern Miller Vaughn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GRMiller/StudyBuddyApp/issues"
+  },
+  "homepage": "https://github.com/GRMiller/StudyBuddyApp#readme"
+}

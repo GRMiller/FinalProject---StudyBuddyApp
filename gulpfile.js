@@ -9,9 +9,12 @@ gulp.task('serve', ['sass'], function() {
         server: "./app"
     });
 
+
     gulp.watch("app/scss/*.scss", ['sass']);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
+
+
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
@@ -20,5 +23,9 @@ gulp.task('sass', function() {
         .pipe(gulp.dest("app/css"))
         .pipe(browserSync.stream());
 });
+
+
+
+
 
 gulp.task('default', ['serve']);

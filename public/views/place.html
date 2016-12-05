@@ -1,3 +1,26 @@
+<h1>Business Details</h1>
 <section>
-
+  <img src="{{business.image}}" />
+  <p>Name: {{business.name}}</p>
+  <p>Location: {{business.location}}</p>
+  <p>Phone number: {{business.number}}</p>
+  <p>Hours: {{business.hours}}</p> <!--open now?-->
+</section>
+<section>
+  <p>Details:</p>
+  <ul>
+    <li>Noise level</li>
+    <li>Size</li>
+    <li>Wifi</li>
+    <li>Parking</li>
+    <li>Outlets</li>
+    <li>Food</li>
+    <li>Live music</li>
+  </ul>
+</section>
+<section>
+  Comments:
+  <div ng-repeat="comment in comments">
+    {{comment}}
+  </div>
 </section>

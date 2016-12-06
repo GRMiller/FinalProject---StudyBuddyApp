@@ -1,47 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mainMod">
   <head>
     <title>Study Buddy! Get the Results You Want</title>
-
     <!--META TAGS-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!--CSS-->
     <link type="text/css" href="css/reset.css" rel="stylesheet"></link>
-
       <!--ANY IMPORT STYLES-->
 
     <!-- <link type="text/css" href="css/styles.css" rel="stylesheet"></link> -->
 
   </head>
-
-
-
-
   <!--BEGIN BODY-->
   <body>
 
     <nav>
       <h1>Study Buddy</h1>
-      <h3>Your guide to learning..</h3>
-
-      <a href="#">Home</a>
-      <a href="#">About</a>
+      <h3>Your guide to learning...</h3>
+      <a href="#/">Home</a>
+      <a href="#/about">About</a>
     </nav>
 
+
     <section id="search_bar" ng-controller="searchCtrl">
-      <input type="text" ng-model="userText.term" placeholder="Keywords" />
 
-      <input type="text" ng-model="userText.location" placeholder="Find your ultimate study spot..." />
-
-      <input type="submit" ng-click="userSearch(userText)">Find</input>
-
+      <form>
+        <input type="text" ng-model="userText.term" placeholder="Keywords" />
+        <input type="text" ng-model="userText.location" placeholder="Find your ultimate study spot..." />
+        <input type="submit" value="Find" ng-click="userSearch(userText)"></input>
+      </form>
+      
       <p>Advanced Search</p>
     </section>
 
     <ng-view>
     </ng-view>
+
+
 
 
 

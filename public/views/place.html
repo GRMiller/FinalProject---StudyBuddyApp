@@ -23,10 +23,11 @@
     <li>Good for groups</li>
   </ul>
 </section>
-<section>
+<section ng-controller="displayCommentsCtrl">
   Comments:
   <div ng-repeat="comment in comments">
     <!-- should this display each individual reviewer's numerical ratings too? -->
+    <!-- if so, this might need to be a custom directive -->
     {{comment}}
   </div>
 </section>

@@ -13,3 +13,5 @@ app.factory("commentStore", function(){
     }
   };
 });
+
+})();

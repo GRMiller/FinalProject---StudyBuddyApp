@@ -11,7 +11,7 @@ app.config(function($routeProvider){
   }),
   $routeProvider.when("/place", {
     templateUrl:"views/place.html"
-  });  
+  });
 });
 
 

@@ -1,7 +1,15 @@
 var express = require('express');
 var app = express();
 var yelp = require('yelp-fusion');
+var comment = require("./module");
 
+//fake comments api
+app.get("/api/comments", function(req, res) {
+  res.send(comment.comments);
+});
+
+
+//yelp stuff
 //need to add these in order for program to work
 var clientId = "";
 var clientSecret = "";
@@ -23,6 +31,7 @@ yelp.accessToken(clientId, clientSecret).then(response => {
   console.log(e);
 });
 
+//server stuff
 app.use(express.static(__dirname + '/public'));
 
 var server = app.listen(3000, function () {

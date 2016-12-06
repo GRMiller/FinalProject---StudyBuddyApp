@@ -11,8 +11,8 @@ app.get("/api/comments", function(req, res) {
 
 //yelp stuff
 //need to add these in order for program to work
-var clientId = "nXqD_i17OL-LeQYs9dD_og";
-var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
+var clientId = "";
+var clientSecret = "";
 
 app.get("/api/businesses", function(req, res) {
   //begin our api call and grab user search terms from setSearchCtrl

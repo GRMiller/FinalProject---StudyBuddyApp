@@ -17,7 +17,7 @@ var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfU
 app.get("/api/businesses", function(req, res) {
   //begin our api call and grab user search terms from setSearchCtrl
 
-  console.log(userText);
+  res.send(userText);
 
 
   yelp.accessToken(clientId, clientSecret).then(response => {
@@ -25,8 +25,8 @@ app.get("/api/businesses", function(req, res) {
 
     client.search({
     //where we place in user search terms
-    term: '',
-    location: 'detroit'
+    term: userText.term,
+    location: userText.location
   }).then(response => {
 
     //link fetchSearchCtrl to display results on page

@@ -11,10 +11,17 @@ app.controller("displayCommentsCtrl", function($scope, $http,$route, $routeParam
   //comments that are stored in our own api
   var apiComments = function() {
     $http.get("api/comments").then(function(response) {
-      console.log(response);
-      console.log(response.data[0].userinput);
+      for(var i = 0; i < response.data.length; i++) {
+        if($route.current.params.businessid === response.data[i].businessid) {
+          $scope.comments = response.data[i].userinput;
+          return;
+        } else {
+          $scope.comments = ["No comments"];
+          //this probably can't stay here forever since it'll look weird if we add a comment later
+        }
+      }
     }, function(response) {
-      // $scope.comments = "No comments";
+      return false;
     });
   }
 

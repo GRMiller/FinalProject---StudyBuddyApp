@@ -25,7 +25,7 @@
 </section>
 <section ng-controller="displayCommentsCtrl">
   Comments:
-  <div ng-repeat="comment in comments">
+  <div ng-repeat="comment in comments track by $index">
     <!-- should this display each individual reviewer's numerical ratings too? -->
     <!-- if so, this might need to be a custom directive -->
     {{comment}}

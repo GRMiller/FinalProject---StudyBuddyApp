@@ -9,18 +9,77 @@
 <section>
   <p>Details:</p>
   <ul>
-    <li>Noise level</li>
-    <li>Size</li>
+    <!-- from yelp, boolean -->
     <li>Wifi</li>
     <li>Parking</li>
+    <li>Live music</li> <!--not actually sure if yelp has this -->
+    <li>Food</li> <!-- anything in a food category -->
+    <!-- from reviews, ranking 1-5, avg of everyone's -->
+    <li>Noise level</li>
+    <li>Crowd size</li>
+    <li>Size</li>
     <li>Outlets</li>
     <li>Food</li>
-    <li>Live music</li>
+    <li>Good for groups</li>
   </ul>
 </section>
 <section>
   Comments:
   <div ng-repeat="comment in comments">
+    <!-- should this display each individual reviewer's numerical ratings too? -->
     {{comment}}
   </div>
+</section>
+<section>
+  <!-- Maybe make this a link to a different view or have a modal or something? -->
+  <p>Leave a rating for {{business.name}}!
+  <form ng-controller="receiveCommentsCtrl">
+    <label>Noise Level:
+      <p>
+        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="1">
+        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="2">
+        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="3">
+        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="4">
+        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="5">
+      </p>
+    </label>
+    <label>Crowd size:
+      <p>
+        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="1">
+        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="2">
+        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="3">
+        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="4">
+        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="5">
+      </p>
+    </label>
+    <label>Building size:
+      <p>
+        <input type="radio" ng-model="reviews.size" name="buildingsize" value="1">
+        <input type="radio" ng-model="reviews.size" name="buildingsize" value="2">
+        <input type="radio" ng-model="reviews.size" name="buildingsize" value="3">
+        <input type="radio" ng-model="reviews.size" name="buildingsize" value="4">
+        <input type="radio" ng-model="reviews.size" name="buildingsize" value="5">
+      </p>
+    </label>
+    <label>Outlet availability:
+      <p>
+        <input type="radio" ng-model="reviews.outlets" name="outlets" value="1">
+        <input type="radio" ng-model="reviews.outlets" name="outlets" value="2">
+        <input type="radio" ng-model="reviews.outlets" name="outlets" value="3">
+        <input type="radio" ng-model="reviews.outlets" name="outlets" value="4">
+        <input type="radio" ng-model="reviews.outlets" name="outlets" value="5">
+      </p>
+    </label>
+    <label>Space for groups:
+      <p>
+        <input type="radio" ng-model="reviews.groups" name="groups" value="1">
+        <input type="radio" ng-model="reviews.groups" name="groups" value="2">
+        <input type="radio" ng-model="reviews.groups" name="groups" value="3">
+        <input type="radio" ng-model="reviews.groups" name="groups" value="4">
+        <input type="radio" ng-model="reviews.groups" name="groups" value="5">
+      </p>
+    </label>
+    <input type="text" ng-model="reviews.comment" placeholder="Leave a comment!">
+    <input type="submit" ng-click="receiveComments(review)">
+  </form>
 </section>

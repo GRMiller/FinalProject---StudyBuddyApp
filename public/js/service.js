@@ -1,16 +1,15 @@
 (function() {
-var app = angular.module("mainMod", ["ngRoute"]);
+var app = angular.module("mainMod");
 //Service for user-submitted comments for feedback on venues
 //Borrowed from Lab 15 (Madlibs)
-app.service("mainMod", function(){
-  function setWords(words){
-    storedWords = words;
-  }
-  function getWords(){
-    return storedWords;
-  }
-  return{
-    setWords: setWords,
-    getWords: getWords
-  }
+app.factory("commentStore", function(){
+  var comments;
+  return {
+    setComments: function(reviews) {
+      comments = reviews;
+    },
+    getComments: function() {
+      return comments;
+    }
+  };
 });

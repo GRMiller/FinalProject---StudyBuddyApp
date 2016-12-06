@@ -1,64 +1,56 @@
-exports.comments = [
+exports.comments = [ //is this supposed to be an array or an object??
   { //first business
-    businessid: "",
+    businessid: "Grand Circus",
     userinput: [ //there might be a better way to organize this
       {
-        username: "",
+        username: "Grant",
         ratings: {
-          // noise: ,//1-5
-          // crowd: ,//1-5
-          // size: ,//1-5
-          // wifi: ,//y/n
-          // parking: ,//1-5
-          // outlets: ,//1-5
-          // groups: //1-5
+          noise: 3,//1-5
+          crowd: 2,//1-5
+          size: 5,//1-5
+          outlets: 5,//1-5
+          groups: 5//1-5
         },
-        comment: ""
+        comment: "A great place to get work done!"
       },
       {
-        username: "",
+        username: "Chirpus",
         ratings: {
-          // noise: ,//1-5
-          // crowd: ,//1-5
-          // size: ,//1-5
-          // wifi: ,//y/n
-          // parking: ,//1-5
-          // outlets: ,//1-5
-          // groups: //1-5
+          noise: 4,//1-5
+          crowd: 4,//1-5
+          size: 5,//1-5
+          outlets: 5,//1-5
+          groups: 4//1-5
         },
-        comment: ""
+        comment: "So many people! All the free parking is far away. =("
       }
     ]
   },
   { //second business
-    businessid: "",
+    businessid: "Ashe Supply Co",
     userinput: [
       {
-        username: "",
+        username: "John Smith",
         ratings: {
-          // noise: ,//1-5
-          // crowd: ,//1-5
-          // size: ,//1-5
-          // wifi: ,//y/n
-          // parking: ,//1-5
-          // outlets: ,//1-5
-          // groups: //1-5
+          noise: 3,
+          crowd: 3,
+          size: 2,
+          outlets: 2,
+          groups: 4
         },
-        comment: ""
-      },
-      {
-        username: "",
-        ratings: {
-          // noise: ,//1-5
-          // crowd: ,//1-5
-          // size: ,//1-5
-          // wifi: ,//y/n
-          // parking: ,//1-5
-          // outlets: ,//1-5
-          // groups: //1-5
-        },
-        comment: ""
-      }
+        comment: "Pros: It's coffee. Cons: It's money."
+      }//,
+      // {
+      //   username: "",
+      //   ratings: {
+      //     // noise: ,
+      //     // crowd: ,
+      //     // size: ,
+      //     // outlets: ,
+      //     // groups:
+      //   },
+      //   comment: ""
+      // }
     ]
   }
 ];

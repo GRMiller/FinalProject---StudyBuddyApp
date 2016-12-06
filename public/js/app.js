@@ -11,6 +11,7 @@ app.config(function($routeProvider){
     controller:"fetchSearchCtrl"
   }),
   $routeProvider.when("/place", {
+    controller: "businessCtrl",
     templateUrl:"views/place.html"
   });
 });

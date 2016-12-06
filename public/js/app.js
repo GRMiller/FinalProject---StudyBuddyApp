@@ -7,11 +7,12 @@ app.config(function($routeProvider){
     templateUrl:"views/about.html"
   }),
   $routeProvider.when("/results", {
-    templateUrl:"views/results.html"
+    templateUrl:"views/results.html",
+    controller:"fetchSearchCtrl"
   }),
   $routeProvider.when("/place", {
     templateUrl:"views/place.html"
-  });  
+  });
 });
 
 

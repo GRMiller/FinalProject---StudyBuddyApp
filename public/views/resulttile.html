@@ -1,11 +1,10 @@
 <!-- This is what should be used in the directive when displaying the list of search results -->
-Name of business
-Address/phone #
-Blurb
-Hours/open now
-Noise level
-Size
-Wifi
-Food
-Cost
-Image?
+<section>
+  <ul>
+    <a href="#/place?businessid={{result.id}}"><li>{{result.name}}</li></a>
+    <li>{{result.location}}</li>
+    <li>{{result.phone}}</li>
+    <li>{{result.price}}</li>
+    <!-- <img ng-src="{{result.image_url}}" /> -->
+  </ul>
+</section>

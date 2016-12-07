@@ -29,7 +29,7 @@
         <input type="text"  ng-model="userText.term" placeholder="Keywords" />
         <input type="text"
          ng-model="userText.location" placeholder="Find your ultimate study spot..." />
-        <input type="submit" value="Find" ng-click="userSearch(userText)"></input>
+        <a href="#/searchresults"><input type="submit" value="Find" ng-click="userSearch(userText)"></input></a>
       </form>
 
       <p>Advanced Search</p>
@@ -56,10 +56,12 @@
   <script type="text/javascript" src="lib/Angular/angular-route.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/setSearchCtrl.js"></script>
+  <script type="text/javascript" src="js/getSearchCtrl.js"></script>
+  <script type="text/javascript" src="js/searchResultsService.js"></script>
   <script type="text/javascript" src="js/businessCtrl.js"></script>
   <script type="text/javascript" src="js/receiveCommentsCtrl.js"></script>
   <script type="text/javascript" src="js/displayCommentsCtrl.js"></script>
-  <script type="text/javascript" src="js/service.js"></script>
+  <script type="text/javascript" src="js/commentsService.js"></script>
 
   </body>
 </html>

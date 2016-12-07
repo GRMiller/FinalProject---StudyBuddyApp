@@ -6,9 +6,9 @@ app.config(function($routeProvider){
   $routeProvider.when("/about", {
     templateUrl:"views/about.html"
   }),
-  $routeProvider.when("/results", {
+  $routeProvider.when("/searchresults", {
     templateUrl:"views/results.html",
-    controller:"fetchSearchCtrl"
+    controller:"getSearchCtrl"
   }),
   $routeProvider.when("/place", {
     controller: "businessCtrl",

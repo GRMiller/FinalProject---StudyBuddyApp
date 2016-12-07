@@ -14,26 +14,22 @@ app.get("/api/comments", function(req, res) {
 
 //YELP CALL
 
-    //ERASE BEFORE COMMIT!!!!!!
-    
+//DELETE THE KEYS
+
 
 
 app.get('/api/userSearch', function(req, res) {
-  console.log("srvrside - setSrchCtrl: ", req.query);
-
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
     term: req.query.term,
     location: req.query.location
   };
-  console.log(searchParams);
 
   //begin call
   yelp.accessToken(clientId, clientSecret).then(response => {
     const client = yelp.client(response.jsonBody.access_token);
 
     client.search(searchParams).then(response => {
-      console.log("this is yelp's response: ", response.jsonBody.businesses)
 
       res.send(response.jsonBody);
     });

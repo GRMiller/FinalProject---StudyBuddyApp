@@ -2,7 +2,6 @@
 var app = angular.module("mainMod");
 
 app.factory("searchTermsService", function(){
-  console.log("searchTermsService is linked correctly")
 
   var searchTerms = {};
 

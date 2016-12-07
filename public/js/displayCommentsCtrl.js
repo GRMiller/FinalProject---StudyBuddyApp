@@ -2,13 +2,15 @@
 var app = angular.module("mainMod");
 //displays comments that are stored in the controller
 
+
+//comments from form input on the #/place view
 app.controller("displayCommentsCtrl", function($scope, $http,$route, $routeParams, commentStore) {
   var displayComments = function() {
     $scope.storedComments = commentStore.getComments();
     //not sure if if this has to be scope or if it can be var
   };
 
-  //comments that are stored in our own api
+  //comments that are stored in our own api (not yelp's)
   var apiComments = function() {
     $http.get("api/comments").then(function(response) {
       for(var i = 0; i < response.data.length; i++) {

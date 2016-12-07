@@ -15,17 +15,16 @@ app.get("/api/comments", function(req, res) {
 //YELP CALL
 
     //ERASE BEFORE COMMIT!!!!!!
-    var clientId = "";
-    var clientSecret = "";
-    //ARE THESE ERASED??????
+    
+
 
 app.get('/api/userSearch', function(req, res) {
   console.log("srvrside - setSrchCtrl: ", req.query);
 
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
-    term: req.query.user_term,
-    location: req.query.user_location
+    term: req.query.term,
+    location: req.query.location
   };
   console.log(searchParams);
 

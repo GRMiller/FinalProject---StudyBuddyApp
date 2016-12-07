@@ -7,12 +7,12 @@ app.factory("searchResultsService", function(){
 
   function setSearchResults(response) {
     searchResults = response;
-    console.log("set: ", searchResults);
+    console.log("setResponse: ", searchResults);
     return searchResults;
   }
 
   function getSearchResults(response) {
-    console.log("get: ", searchResults);
+    console.log("getResponse: ", searchResults);
     return searchResults;
   }
 

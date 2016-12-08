@@ -39,53 +39,53 @@
   <form ng-controller="getCommentsCtrl">
     <label>Noise Level:
       <p>
-        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="1">
-        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="2">
-        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="3">
-        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="4">
-        <input type="radio" ng-model="reviews.noise" name="noiselevel" value="5">
+        <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="1">
+        <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="2">
+        <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="3">
+        <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="4">
+        <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="5">
       </p>
     </label>
     <label>Crowd size:
       <p>
-        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="1">
-        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="2">
-        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="3">
-        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="4">
-        <input type="radio" ng-model="reviews.crowd" name="crowdsize" value="5">
+        <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="1">
+        <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="2">
+        <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="3">
+        <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="4">
+        <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="5">
       </p>
     </label>
     <label>Building size:
       <p>
-        <input type="radio" ng-model="reviews.size" name="buildingsize" value="1">
-        <input type="radio" ng-model="reviews.size" name="buildingsize" value="2">
-        <input type="radio" ng-model="reviews.size" name="buildingsize" value="3">
-        <input type="radio" ng-model="reviews.size" name="buildingsize" value="4">
-        <input type="radio" ng-model="reviews.size" name="buildingsize" value="5">
+        <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="1">
+        <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="2">
+        <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="3">
+        <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="4">
+        <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="5">
       </p>
     </label>
     <label>Outlet availability:
       <p>
-        <input type="radio" ng-model="reviews.outlets" name="outlets" value="1">
-        <input type="radio" ng-model="reviews.outlets" name="outlets" value="2">
-        <input type="radio" ng-model="reviews.outlets" name="outlets" value="3">
-        <input type="radio" ng-model="reviews.outlets" name="outlets" value="4">
-        <input type="radio" ng-model="reviews.outlets" name="outlets" value="5">
+        <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="1">
+        <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="2">
+        <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="3">
+        <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="4">
+        <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="5">
       </p>
     </label>
     <label>Space for groups:
       <p>
-        <input type="radio" ng-model="reviews.groups" name="groups" value="1">
-        <input type="radio" ng-model="reviews.groups" name="groups" value="2">
-        <input type="radio" ng-model="reviews.groups" name="groups" value="3">
-        <input type="radio" ng-model="reviews.groups" name="groups" value="4">
-        <input type="radio" ng-model="reviews.groups" name="groups" value="5">
+        <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="1">
+        <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="2">
+        <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="3">
+        <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="4">
+        <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="5">
       </p>
     </label>
-    <form id="comment_field">
+    <div id="comment_field">
       <input type="text" name="userName" ng-model="reviews.username" placeholder="Your Name" />
-      <textarea cols="60" rows="15" form="comment_field" placeholder="Leave a comment or review!" ng-model="reviews.comments"></textarea>
+      <textarea cols="60" rows="15" placeholder="Leave a comment or review!" ng-model="reviews.comments"></textarea>
       <input type="submit" ng-click="receiveComments(reviews)">
-    </form>
+    </div>
   </form>
 </section>

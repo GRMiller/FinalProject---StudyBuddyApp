@@ -14,7 +14,7 @@ app.factory("commentsService", function(){
     },
 
     getComments: function() {
-      console.log(userComments.comments);
+      console.log("getComments: ", userComments.comments);
       return userComments.comments;
     }
   };

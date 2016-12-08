@@ -1,15 +1,16 @@
 <h1>Business Details</h1>
 <section>
-  <img src="{{business.image}}" />
+  <img ng-src="{{business.image_url}}" />
   <p>Name: {{business.name}}</p>
   <p>Location: {{business.location}}</p>
-  <p>Phone number: {{business.number}}</p>
-  <p>Hours: {{business.hours}}</p> <!--open now?-->
+  <p>Phone number: {{business.phone}}</p>
+  <p>Hours: {{business.hours.open}}</p> <!--open now?-->
 </section>
 <section>
   <p>Details:</p>
   <ul>
-    <!-- from yelp, boolean -->
+    <!-- from yelp, boolean. they might not provide as much info as we had hoped... -->
+    <li>Price: {{business.price}}</li>
     <li>Wifi</li>
     <li>Parking</li>
     <li>Live music</li> <!--not actually sure if yelp has this -->
@@ -25,8 +26,8 @@
 </section>
 <section ng-controller="displayCommentsCtrl">
   Comments:
-  <div ng-repeat="comment in comments track by $index">
-    <!-- should this display each individual reviewer's numerical ratings too? 
+  <div ng-repeat="comment in comments">
+    <!-- should this display each individual reviewer's numerical ratings too?
    if so, this might need to be a custom directive-->
     {{comment}}
   </div>
@@ -82,7 +83,7 @@
       </p>
     </label>
     <form id="comment_field">
-      <input type="text" name="userName" ng-model="reviews.userName" placeholder="Your Name" />
+      <input type="text" name="userName" ng-model="reviews.username" placeholder="Your Name" />
       <textarea cols="60" rows="15" form="comment_field" placeholder="Leave a comment or review!" ng-model="reviews.comments"></textarea>
       <input type="submit" ng-click="receiveComments(reviews)">
     </form>

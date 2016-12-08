@@ -3,27 +3,33 @@ var app = angular.module("mainMod");
 
 //how do we make this specific to the specific business?
 //something like #/place?businessid="business"?? this would need to be setup server-side, probably
-app.controller("getCommentsCtrl", function ($scope, $http, commentsService) {
+app.controller("getCommentsCtrl", function ($scope, $http, $routeParams, commentsService) {
 
   $http.get('/api/comments').success(function(response){
-    console.log("commentsAPI: ", response);
+    console.log("response from commentsAPI: ", response);
 
-      commentsService.setComments(response);
+      for (i=0; i<response.length;i++){
 
-      // for(var i = 0; i < response.businesses.length; i++) {
-      //   if($route.current.params.businessid === response.businesses[i].business.id) {
-      //
-      //     }
-      // }
+        commentsService.setComments(response[i]);
+      };
 
   }).error(function(){
     console.log("error in getting /api/comments");
   });
 
-  $scope.receiveComments = function(reviews) {
-    console.log("receiveComments: ", reviews);
+  // var Comment = {
+  //   businessid = $routeParams.businessid,
+  //   comment = reviews.comments,
+  //   username = reviews.username,
+  //   ratings = {crowd = reviews.crowd, groups = reviews.groups, noise = reviews.noise, outlets = reviews.outlets, size = reviews.size}
+  // }
 
-    commentsService.setComments($scope.reviews);
+  $scope.receiveComments = function(reviews) {
+
+    businessid = $routeParams.businessid,
+    
+    reviews.businessid = businessid;
+    commentsService.setComments(reviews);
   };
 });
 //do we want to use $location to take them to some sort of thank you page after they submit a comment?

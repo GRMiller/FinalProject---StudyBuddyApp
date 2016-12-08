@@ -8,23 +8,27 @@ app.controller("displayCommentsCtrl", function($scope, $http,$route, $routeParam
 
     var comments = commentsService.getComments();
     console.log("displayComments: ", comments);
-      for(var i = 0; i < comments; i++) {
+
+      for(var i = 0; i <= comments.length; i++) {
+        console.log("for loop must be working ", comments[i]);
         if($route.current.params.businessid === comments[i].businessid) {
-          $scope.comments = response.data[i].userinput;
+          $scope.comments = comments[i].userinput;
           console.log("in loop: ", $scope.comments);
-          return;
         } else {
           $scope.comments = ["No comments"];
-          //this probably can't stay here forever since it'll look weird if we add a comment later
+          console.log("no match found")
         }
       }
+
+    console.log("is it jumping over the for loop???");
     }
 
-  console.log(displayComments());
-  $scope.$on('$routeChangeSuccess', function () {
-    displayComments();
-  });
+    $scope.$on('$routeChangeSuccess', function () {
+      displayComments();
+    });
+
 });
+
 
   //displays the comments on the page
 

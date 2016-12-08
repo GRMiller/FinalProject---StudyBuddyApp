@@ -14,34 +14,45 @@ app.get("/api/comments", function(req, res) {
 
 //YELP CALL
 
+
     //ERASE BEFORE COMMIT!!!!!!
     var clientId = "nXqD_i17OL-LeQYs9dD_og";
     var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
 
+//DELETE THE KEYS
 
+
+
+//search api
 app.get('/api/userSearch', function(req, res) {
-  console.log("srvrside - setSrchCtrl: ", req.query);
-
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
     term: req.query.term,
     location: req.query.location
   };
-  console.log(searchParams);
-
   //begin call
   yelp.accessToken(clientId, clientSecret).then(response => {
     const client = yelp.client(response.jsonBody.access_token);
-
     client.search(searchParams).then(response => {
-      console.log("this is yelp's response: ", response.jsonBody.businesses)
-
       res.send(response.jsonBody);
     });
   }).catch(e => {
     console.log(e);
   });;
-})
+});
+
+//business api
+app.get('/api/business', function(req, res) {
+  yelp.accessToken(clientId, clientSecret).then(response => {
+    const client = yelp.client(response.jsonBody.access_token);
+
+    client.business(req.query.id).then(response => {
+      res.send(response.jsonBody);
+    }).catch(e => {
+      console.log(e);
+    });;
+  });
+});
 
 
 

@@ -11,10 +11,18 @@ app.config(function($routeProvider){
     controller:"getSearchCtrl"
   }),
   $routeProvider.when("/place", {
-    templateUrl:"views/place.html"
+    templateUrl:"views/place.html",
+    controller:"businessCtrl"
   });
 });
 
+app.directive("resultView", function(){
+  return {
+    restrict: "E",
+    templateUrl: "views/resultpartial.html",
+    replace: false
+  }
+});
 
 
 

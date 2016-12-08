@@ -1,6 +1,6 @@
-exports.comments = [ //is this supposed to be an array or an object??
+exports.comments = [//is this supposed to be an array or an object??
   { //first business
-    businessid: "Grand Circus",
+    businessid: "grand-circus-detroit",
     userinput: [ //there might be a better way to organize this
       {
         username: "Grant",
@@ -27,7 +27,7 @@ exports.comments = [ //is this supposed to be an array or an object??
     ]
   },
   { //second business
-    businessid: "Ashe Supply Co",
+    businessid: "ashe-supply-co-detroit-2",
     userinput: [
       {
         username: "John Smith",

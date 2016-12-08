@@ -14,7 +14,7 @@ app.controller("searchCtrl", ['$scope', "$http", "searchTermsService", "searchRe
         searchResultsService.setSearchResults(response);
 
       }).error(function(userText){
-        console.log("error : ", $scope.userText);
+        console.log("error: ", $scope.userText);
       });
   };
 }]);

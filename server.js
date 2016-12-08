@@ -15,7 +15,8 @@ app.get("/api/comments", function(req, res) {
 //YELP CALL
 
     //ERASE BEFORE COMMIT!!!!!!
-    
+    var clientId = "nXqD_i17OL-LeQYs9dD_og";
+    var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
 
 
 app.get('/api/userSearch', function(req, res) {

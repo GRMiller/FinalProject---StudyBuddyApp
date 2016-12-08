@@ -26,15 +26,16 @@
 <section ng-controller="displayCommentsCtrl">
   Comments:
   <div ng-repeat="comment in comments track by $index">
-    <!-- should this display each individual reviewer's numerical ratings too? -->
-    <!-- if so, this might need to be a custom directive -->
+    <!-- should this display each individual reviewer's numerical ratings too? 
+   if so, this might need to be a custom directive-->
     {{comment}}
   </div>
 </section>
+
 <section>
   <!-- Maybe make this a link to a different view or have a modal or something? -->
   <p>Leave a rating for {{business.name}}!
-  <form ng-controller="receiveCommentsCtrl">
+  <form ng-controller="getCommentsCtrl">
     <label>Noise Level:
       <p>
         <input type="radio" ng-model="reviews.noise" name="noiselevel" value="1">
@@ -80,7 +81,10 @@
         <input type="radio" ng-model="reviews.groups" name="groups" value="5">
       </p>
     </label>
-    <input type="text" ng-model="reviews.comment" placeholder="Leave a comment!">
-    <input type="submit" ng-click="receiveComments(review)">
+    <form id="comment_field">
+      <input type="text" name="userName" ng-model="reviews.userName" placeholder="Your Name" />
+      <textarea cols="60" rows="15" form="comment_field" placeholder="Leave a comment or review!" ng-model="reviews.comments"></textarea>
+      <input type="submit" ng-click="receiveComments(reviews)">
+    </form>
   </form>
 </section>

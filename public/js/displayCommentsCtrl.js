@@ -2,37 +2,35 @@
 var app = angular.module("mainMod");
 //displays comments that are stored in the controller
 
-app.controller("displayCommentsCtrl", function($scope, $http,$route, $routeParams, commentStore) {
-  var displayComments = function() {
-    $scope.storedComments = commentStore.getComments();
-    //not sure if if this has to be scope or if it can be var
-  };
+app.controller("displayCommentsCtrl", function($scope, $http,$route, $routeParams, commentsService, searchResultsService) {
 
-  //comments that are stored in our own api
-  var apiComments = function() {
-    $http.get("api/comments").then(function(response) {
-      for(var i = 0; i < response.data.length; i++) {
-        if($route.current.params.businessid === response.data[i].businessid) {
+  var displayComments = function(userComments) {
+
+    var comments = commentsService.getComments();
+    console.log("displayComments: ", comments);
+      for(var i = 0; i < comments; i++) {
+        if($route.current.params.businessid === comments[i].businessid) {
           $scope.comments = response.data[i].userinput;
+          console.log("in loop: ", $scope.comments);
           return;
         } else {
           $scope.comments = ["No comments"];
           //this probably can't stay here forever since it'll look weird if we add a comment later
         }
       }
-    }, function(response) {
-      return false;
-    });
-  }
+    }
 
-  //displays the comments on the page
+  console.log(displayComments());
   $scope.$on('$routeChangeSuccess', function () {
-    apiComments();
     displayComments();
   });
+});
+
+  //displays the comments on the page
+
   //we might choose to do this differently
 
-});
+
 
 
 })();

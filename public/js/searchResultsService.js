@@ -3,7 +3,7 @@ var app = angular.module("mainMod");
 
 app.factory("searchResultsService", function(){
   console.log("searchResultsService is linked correctly")
-  var searchResults = {};
+  var searchResults;
 
   function setSearchResults(response) {
     searchResults = response;

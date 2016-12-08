@@ -24,10 +24,13 @@ app.directive("resultView", function(){
   }
 });
 
-
-
-
-
+app.directive("businessForm", function(){
+  return {
+    restrict: "E",
+    templateUrl: "views/formpartial.html",
+    replace: false
+  }
+});
 
 
 

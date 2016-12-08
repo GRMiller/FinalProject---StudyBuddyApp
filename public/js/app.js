@@ -19,7 +19,7 @@ app.config(function($routeProvider){
 app.directive("resultView", function(){
   return {
     restrict: "E",
-    templateUrl: "views/resulttile.html",
+    templateUrl: "views/resultpartial.html",
     replace: false
   }
 });

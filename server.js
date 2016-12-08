@@ -18,26 +18,36 @@ var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfU
 //DELETE THE KEYS
 
 
-
+//search api
 app.get('/api/userSearch', function(req, res) {
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
     term: req.query.term,
     location: req.query.location
   };
-
   //begin call
   yelp.accessToken(clientId, clientSecret).then(response => {
     const client = yelp.client(response.jsonBody.access_token);
-
     client.search(searchParams).then(response => {
-
       res.send(response.jsonBody);
     });
   }).catch(e => {
     console.log(e);
   });;
-})
+});
+
+//business api
+app.get('/api/business', function(req, res) {
+  yelp.accessToken(clientId, clientSecret).then(response => {
+    const client = yelp.client(response.jsonBody.access_token);
+
+    client.business(req.query.id).then(response => {
+      res.send(response.jsonBody);
+    }).catch(e => {
+      console.log(e);
+    });;
+  });
+});
 
 
 

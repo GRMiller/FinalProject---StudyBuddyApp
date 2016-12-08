@@ -1,15 +1,16 @@
 <h1>Business Details</h1>
 <section>
-  <img src="{{business.image}}" />
+  <img ng-src="{{business.image_url}}" />
   <p>Name: {{business.name}}</p>
   <p>Location: {{business.location}}</p>
-  <p>Phone number: {{business.number}}</p>
-  <p>Hours: {{business.hours}}</p> <!--open now?-->
+  <p>Phone number: {{business.phone}}</p>
+  <p>Hours: {{business.hours.open}}</p> <!--open now?-->
 </section>
 <section>
   <p>Details:</p>
   <ul>
-    <!-- from yelp, boolean -->
+    <!-- from yelp, boolean. they might not provide as much info as we had hoped... -->
+    <li>Price: {{business.price}}</li>
     <li>Wifi</li>
     <li>Parking</li>
     <li>Live music</li> <!--not actually sure if yelp has this -->

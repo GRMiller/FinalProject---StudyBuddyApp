@@ -13,8 +13,7 @@ app.get("/api/comments", function(req, res) {
 
 
 //YELP CALL
-var clientId = "nXqD_i17OL-LeQYs9dD_og";
-var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
+
 //DELETE THE KEYS
 
 

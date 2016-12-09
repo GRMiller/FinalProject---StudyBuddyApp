@@ -29,6 +29,16 @@ gulp.task('sass:watch', function () {
   gulp.watch('./public/scss/**/*.scss', ['sass']);
 });
 
+gulp.task('serve', ['sass'], function() {
+    browserSync.init({
+        proxy: "localhost:3000",
+        files: ["./public"]
+    });
+
+    gulp.watch("public/scss/*.scss", ['sass']);
+    gulp.watch("public/**/*.html").on('change', browserSync.reload);
+});
+
 //Concatenate script files task
 gulp.task("concatScripts", function() {
 gulp.src([

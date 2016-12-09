@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #place_view {
   max-width: 100%; }
   #place_view #business {
@@ -15,3 +16,52 @@
       margin-right: 3%; }
     #place_view #business #bz_details {
       float: right; }
+=======
+body {
+  background-color: #becbe0;
+  color: #4a5059; }
+
+#quote {
+  font-style: italic; }
+
+.bioimg {
+  width: 100%;
+  border-radius: 100%; }
+  .bioimg .bioimg:hover {
+    opacity: .9; }
+
+figure {
+  display: inline-block;
+  width: 10%;
+  vertical-align: top;
+  text-align: center; }
+
+footer a {
+  text-decoration: none;
+  color: inherit; }
+
+.result {
+  text-align: center;
+  background-color: #f7f7f7;
+  border: 1px solid #373c44;
+  margin: 1em auto;
+  width: 90%;
+  position: relative; }
+  .result img {
+    max-height: 100%;
+    max-width: 100%;
+    float: left;
+    display: block;
+    position: absolute; }
+  .result ul {
+    list-style: none;
+    padding: 0; }
+  .result a {
+    color: #4a5059;
+    text-decoration: none; }
+    .result a:hover {
+      color: #859dc4; }
+  .result .ratings li {
+    display: inline;
+    width: auto; }
+>>>>>>> d347f1afa2f43796c0def7cd9c453cb9ad244133

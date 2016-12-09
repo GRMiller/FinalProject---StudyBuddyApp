@@ -1,0 +1,33 @@
+.result {
+  text-align: center;
+  background-color: #f7f7f7;
+  border: 1px solid #373c44;
+  margin: 1em auto;
+  width: 90%;
+  position: relative;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    float: left;
+    display: block;
+    position: absolute;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    color: #4a5059;
+    text-decoration: none;
+    &:hover {
+      color: #859dc4;
+    }
+  }
+  .ratings {
+    li{
+      display: inline;
+      width: auto;
+    }
+  }
+}

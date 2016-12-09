@@ -1,1 +1,34 @@
+<<<<<<< HEAD
 @import "places";
+=======
+body {
+  background-color: #becbe0;
+  color: #4a5059;
+}
+
+#quote {
+font-style: italic;
+}
+
+.bioimg {
+  width: 100%;
+  border-radius: 100%;
+  .bioimg:hover {
+    opacity: .9;
+  }
+}
+
+figure {
+  display: inline-block;
+  width: 10%;
+  vertical-align: top;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@import "results";
+>>>>>>> d347f1afa2f43796c0def7cd9c453cb9ad244133

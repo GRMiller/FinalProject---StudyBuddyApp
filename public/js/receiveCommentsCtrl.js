@@ -1,8 +1,5 @@
 (function () {
 var app = angular.module("mainMod");
-
-//how do we make this specific to the specific business?
-//something like #/place?businessid="business"?? this would need to be setup server-side, probably
 app.controller("getCommentsCtrl", function ($scope, $http, $route, $routeParams, commentsService) {
 
   $scope.receiveComments = function(reviews) {

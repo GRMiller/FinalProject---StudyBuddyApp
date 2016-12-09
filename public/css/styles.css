@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #place_view {
   max-width: 100%; }
   #place_view #business {
@@ -13,10 +12,13 @@
       display: block;
       max-width: 45%;
       float: right;
-      margin-right: 3%; }
+      margin-right: 10%;
+      margin-top: -3%;
+      line-height: 1em; }
     #place_view #business #bz_details {
-      float: right; }
-=======
+      max-width: 45%;
+      font-size: 5em; }
+
 body {
   background-color: #becbe0;
   color: #4a5059; }
@@ -64,4 +66,3 @@ footer a {
   .result .ratings li {
     display: inline;
     width: auto; }
->>>>>>> d347f1afa2f43796c0def7cd9c453cb9ad244133

@@ -7,9 +7,9 @@
       <div id="location">
         <p class="bz_info" id="bz_phone">{{business.phone}}</p>
         <p class="bz_info" id="bz_address">{{business.location.address1}}</p>
-        <p class="bz_info" id="bz_city">{{business.location.city}}</p>
-        <p class="bz_info" id="bz_state">{{business.location.state}}</p>
-        <p class="bz_info" id="bz_zipcode">{{business.location.zip_code}}</p>
+        <span class="bz_info" id="bz_city">{{business.location.city}}</span>
+        <span class="bz_info" id="bz_state">{{business.location.state}}</span>
+        <span class="bz_info" id="bz_zipcode">{{business.location.zip_code}}</span>
       </div>
     <p class="bz_info" id="bz_hours">Hours: {{business.hours.open}}</p>
     </div> <!--open now?-->
@@ -22,7 +22,6 @@
       <li>Price: {{business.price}}</li>
       <li>Wifi</li>
       <li>Parking</li>
-      <li>Live music</li> <!--not actually sure if yelp has this -->
       <li>Food</li> <!-- anything in a food category -->
       <!-- from reviews, ranking 1-5, avg of everyone's -->
       <li>Noise level</li>

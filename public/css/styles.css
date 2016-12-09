@@ -2,6 +2,25 @@ body {
   background-color: #becbe0;
   color: #4a5059; }
 
+#quote {
+  font-style: italic; }
+
+.bioimg {
+  width: 100%;
+  border-radius: 100%; }
+  .bioimg .bioimg:hover {
+    opacity: .9; }
+
+figure {
+  display: inline-block;
+  width: 10%;
+  vertical-align: top;
+  text-align: center; }
+
+footer a {
+  text-decoration: none;
+  color: inherit; }
+
 .result {
   text-align: center;
   background-color: #f7f7f7;

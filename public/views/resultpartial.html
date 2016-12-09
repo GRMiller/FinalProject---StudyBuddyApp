@@ -1,11 +1,18 @@
-<!-- This is what should be used in the directive when displaying the list of search results -->
-<section>
-  <ul>
-    <a href="#/place?businessid={{result.id}}"><li>{{result.name}}</li></a>
-    <li>{{result.location}}</li>
-    <li>{{result.phone}}</li>
-    <li>{{result.price}}</li>
-    <li>{{result.userinput.ratings}}</li>
-    <img ng-src="{{result.image_url}}" />
+<section class="result">
+  <img ng-src="{{result.image_url}}" />
+  <a href="#/place?businessid={{result.id}}"><h3>{{result.name}}</h3></a>
+  <ul class="ratings">
+    <li>Noise level: {{result.userinput.ratings.noise}}</li>
+    <li>Crowd size: {{result.userinput.ratings.crowd}}</li>
+    <li>Size: {{result.userinput.ratings.size}}</li>
+    <li>Outlet availibility: {{result.userinput.ratings.outlets}}</li>
+    <li>Good for groups:{{result.userinput.ratings.groups}}</li>
   </ul>
+  <ul>
+    <li>{{result.location.address1}}</li>
+    <li>{{result.location.city}}, {{result.location.state}} {{result.location.zip_code}}</li>
+    <li>{{result.phone}}</li>
+    <li>Price: {{result.price}}</li>
+  </ul>
+
 </section>

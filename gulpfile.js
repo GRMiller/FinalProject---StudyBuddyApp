@@ -10,7 +10,8 @@ server: {
 baseDir: "./"
 }
 });
-gulp.watch('./*.html').on('change', browserSync.reload);
+gulp.watch('./public/**/*.html').on('change', browserSync.reload);
+// gulp.watch('./public/scss/**/*.scss', ['sass']).on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -28,11 +29,12 @@ gulp.task('sass:watch', function () {
 
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: "./app"
+        proxy: "localhost:3000",
+        files: ["./public"]
     });
 
-    gulp.watch("app/scss/*.scss", ['sass']);
-    gulp.watch("app/*.html").on('change', browserSync.reload);
+    gulp.watch("public/scss/*.scss", ['sass']);
+    gulp.watch("public/**/*.html").on('change', browserSync.reload);
 });
 
 

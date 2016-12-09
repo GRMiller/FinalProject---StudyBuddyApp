@@ -32,7 +32,29 @@ app.directive("businessForm", function(){
   }
 });
 
+app.directive("commentsSection", function(){
+  return {
+    restrict: "E",
+    templateUrl: "views/commentspartial.html",
+    replace: false
+  }
+});
 
+
+
+
+function getLocation() {
+  console.log("location working");
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    console.log(position.coordinates.latitude + " " + position.coordinates.longitude);
+  }
+}
+
+function showPosition (position){
+  console.log("Latitude: " + position.coordinates.latitude + " Longitude: " + position.coordinates.longitude);
+  var latlon = position.coordinates.latitude + "," + position.coordinates.longitude;
+};
 
 
 

@@ -6,7 +6,6 @@ var app = angular.module("mainMod");
 app.controller("getCommentsCtrl", function ($scope, $http, $route, $routeParams, commentsService) {
 
   $scope.receiveComments = function(reviews) {
-    console.log("receiveCtrl ", reviews)
 
     var bizreviews = {};
 

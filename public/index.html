@@ -28,11 +28,12 @@
       <form >
         <input type="text"  ng-model="userText.term" placeholder="Keywords" />
         <input type="text"
-         ng-model="userText.location" placeholder="Find your ultimate study spot..." />
+         ng-model="userText.location" placeholder="Location" />
         <input type="submit" value="Find" ng-click="userSearch(userText)"></input>
       </form>
 
-      <p>Advanced Search</p>
+      <button onclick="getLocation()">Get your location</button>
+      <p id="displaylocation"></p>
     </section>
 
     <ng-view>

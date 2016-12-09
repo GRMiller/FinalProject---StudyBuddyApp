@@ -5,7 +5,7 @@ app.controller("getSearchCtrl", ["$scope", "$http", "searchResultsService", "com
   var displayResults = function() {
     $scope.results = searchResultsService.getSearchResults();
     $scope.ratings = commentsService.getComments(); //maybe rename so you can do .ratings instead on it
-    console.log($scope.results[0].id);
+    console.log($scope.results);
     console.log($scope.ratings);
     // //some psuedo code for brainstorming
     // for(var i=0; i < $scope.results.length; i++) {

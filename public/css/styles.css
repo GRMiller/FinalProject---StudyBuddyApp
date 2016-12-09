@@ -1,3 +1,17 @@
-body {
-  background-color: blue;
-  color: white; }
+#place_view {
+  max-width: 100%; }
+  #place_view #business {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; }
+    #place_view #business img {
+      display: block;
+      max-width: 45%;
+      float: left; }
+    #place_view #business #bz_info {
+      display: block;
+      max-width: 45%;
+      float: right;
+      margin-right: 3%; }
+    #place_view #business #bz_details {
+      float: right; }

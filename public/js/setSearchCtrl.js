@@ -14,7 +14,7 @@ app.controller("searchCtrl", ["$route", '$scope', "$http", "$location", "searchT
         console.log("error: ", $scope.userText);
       });
 
-
+  };
 
 
 
@@ -32,7 +32,7 @@ app.controller("searchCtrl", ["$route", '$scope', "$http", "$location", "searchT
   //   var latlon = position.coordinates.latitude + "," + position.coordinates.longitude;
   // };
 
-  };
+
 }]);
 
 

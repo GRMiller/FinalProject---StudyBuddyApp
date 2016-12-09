@@ -1,15 +1,21 @@
 <div id="place_view">
-<h1>Business Details</h1>
 
-  <section>
-    <img ng-src="{{business.image_url}}" />
-    <p>Name: {{business.name}}</p>
-    <p>Location: {{business.location}}</p>
-    <p>Phone number: {{business.phone}}</p>
-    <p>Hours: {{business.hours.open}}</p> <!--open now?-->
+  <section id="business">
+    <img class="bz_info" id="bz_img"ng-src="{{business.image_url}}" />
+    <div class="bz_info" id="bz_info">
+      <h2 class="bz_info" id="bz_name">{{business.name}}</h2>
+      <div id="location">
+        <p class="bz_info" id="bz_phone">{{business.phone}}</p>
+        <p class="bz_info" id="bz_address">{{business.location.address1}}</p>
+        <p class="bz_info" id="bz_city">{{business.location.city}}</p>
+        <p class="bz_info" id="bz_state">{{business.location.state}}</p>
+        <p class="bz_info" id="bz_zipcode">{{business.location.zip_code}}</p>
+      </div>
+    <p class="bz_info" id="bz_hours">Hours: {{business.hours.open}}</p>
+    </div> <!--open now?-->
   </section>
 
-  <section>
+  <section id='bz_details'>
     <p>Details:</p>
     <ul>
       <!-- from yelp, boolean. they might not provide as much info as we had hoped... -->

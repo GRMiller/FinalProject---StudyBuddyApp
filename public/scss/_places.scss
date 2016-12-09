@@ -1,0 +1,42 @@
+//DEFINE VARIABLES AND MIXINS
+@mixin center {
+    display: block;
+    margin:0 auto;
+  }
+
+
+
+//EVERYTHING IS NESTED INSIDE CONTAINER DIV FOR THIS VIEW
+#place_view {
+
+  max-width:100%;
+
+  #business {
+    @include center;
+    max-width: 100%;
+
+    img {
+      display:block;
+      max-width:45%;
+      float:left;
+    }
+
+    #bz_info {
+      display:block;
+      max-width:45%;
+      float:right;
+      margin-right: 3%;
+    }
+
+    #bz_details {
+      float: right
+      max-width:45%;
+      font-size:5em;
+    }
+
+  }
+
+
+
+
+}

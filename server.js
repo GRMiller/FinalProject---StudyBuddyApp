@@ -1,15 +1,9 @@
 var express = require('express');
 var app = express();
 var yelp = require('yelp-fusion');
-var comment = require("./module");
 var body = require('body');
 var jsonBody = require('body/json');
 var http = require('http');
-
-//fake comments api
-app.get("/api/comments", function(req, res) {
-  res.send(comment.comments);
-});
 
 
 //YELP CALL

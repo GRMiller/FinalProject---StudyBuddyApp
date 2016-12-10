@@ -4,8 +4,6 @@
     margin:0 auto;
   }
 
-
-
 //EVERYTHING IS NESTED INSIDE CONTAINER DIV FOR THIS VIEW
 #place_view {
 
@@ -40,7 +38,6 @@
   .comments {
       @include center;
       display:block;
-      margin-top: 200px;
       clear:left;
       width:80%;
     }

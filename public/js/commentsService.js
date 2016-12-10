@@ -142,11 +142,11 @@ function getAverage() {
     userComments.avgRates.push(
       {
        businessid: userComments.allRates[k].businessid,
-       noise: avgOfRates(userComments.allRates[k].noise),
-       crowd: avgOfRates(userComments.allRates[k].crowd),
-       size: avgOfRates(userComments.allRates[k].size),
-       outlets: avgOfRates(userComments.allRates[k].outlets),
-       groups: avgOfRates(userComments.allRates[k].groups)
+       noise: avgOfRates(userComments.allRates[k].noise).toFixed(1),
+       crowd: avgOfRates(userComments.allRates[k].crowd).toFixed(1),
+       size: avgOfRates(userComments.allRates[k].size).toFixed(1),
+       outlets: avgOfRates(userComments.allRates[k].outlets).toFixed(1),
+       groups: avgOfRates(userComments.allRates[k].groups).toFixed(1)
       }
       );
   }
@@ -162,7 +162,6 @@ function getAverage() {
           userComments.allRates[j].size.push(Number(reviews.userinput.ratings.size));
           userComments.allRates[j].outlets.push(Number(reviews.userinput.ratings.outlets));
           userComments.allRates[j].groups.push(Number(reviews.userinput.ratings.groups));
-          break;
         }
       }
     },

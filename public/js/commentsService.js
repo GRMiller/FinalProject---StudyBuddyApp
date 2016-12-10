@@ -92,35 +92,35 @@ app.factory("commentsService", function(){
       allRates: [
         {
           businessid: "grand-circus-detroit",
-          noise: [],
-          crowd: [],
-          size: [],
-          outlets: [],
-          groups: []
+          noise: [3, 4],
+          crowd: [2, 4],
+          size: [5, 5],
+          outlets: [5, 5],
+          groups: [5, 5]
         },
         {
           businessid: "ashe-supply-co-detroit-2",
-          noise: [],
-          crowd: [],
-          size: [],
-          outlets: [],
-          groups: []
+          noise: [3, 3],
+          crowd: [3, 4],
+          size: [2, 3],
+          outlets: [2, 2],
+          groups: [4, 2]
         },
         {
           businessid: "astro-coffee-detroit",
-          noise: [],
-          crowd: [],
-          size: [],
-          outlets: [],
-          groups: []
+          noise: [5],
+          crowd: [4],
+          size: [3],
+          outlets: [3],
+          groups: [2]
         },
         {
           businessid: "great-lakes-coffee-roasting-company-detroit",
-          noise: [],
-          crowd: [],
-          size: [],
-          outlets: [],
-          groups: []
+          noise: [5],
+          crowd: [4],
+          size: [3],
+          outlets: [3],
+          groups: [2]
         }
       ],
       avgRates: []
@@ -135,21 +135,7 @@ function avgOfRates(array) {
   var avg = sum/array.length;
   return avg;
 }
-//fills arrays in allRates
-function allRatesArrays() {
-  for(var i=0; i < userComments.comments.length; i++) {
-    for(var j =0; j < userComments.allRates.length; j++) {
-      if(userComments.allRates[j].businessid===userComments.comments[i].businessid){
-        userComments.allRates[j].noise.push(userComments.comments[i].userinput.ratings.noise);
-        userComments.allRates[j].crowd.push(userComments.comments[i].userinput.ratings.crowd);
-        userComments.allRates[j].size.push(userComments.comments[i].userinput.ratings.size);
-        userComments.allRates[j].outlets.push(userComments.comments[i].userinput.ratings.outlets);
-        userComments.allRates[j].groups.push(userComments.comments[i].userinput.ratings.groups);
-      }
-    }
-  }
-}
-//calculates averages
+//calculates averages for each business
 function getAverage() {
   userComments.avgRates = [];
   for(var k = 0; k < userComments.allRates.length; k++) {
@@ -168,11 +154,22 @@ function getAverage() {
   return {
     setComments: function(reviews) {
       userComments.comments.push(reviews);
+      console.log(reviews);
+      for(var j =0; j < userComments.allRates.length; j++) {
+        if(userComments.allRates[j].businessid===reviews.businessid){
+          userComments.allRates[j].noise.push(Number(reviews.userinput.ratings.noise));
+          userComments.allRates[j].crowd.push(Number(reviews.userinput.ratings.crowd));
+          userComments.allRates[j].size.push(Number(reviews.userinput.ratings.size));
+          userComments.allRates[j].outlets.push(Number(reviews.userinput.ratings.outlets));
+          userComments.allRates[j].groups.push(Number(reviews.userinput.ratings.groups));
+          break;
+        }
+      }
     },
 
     getComments: function() {
-      allRatesArrays();
       getAverage();
+      console.log(userComments.allRates);
       return userComments;
     }
   };

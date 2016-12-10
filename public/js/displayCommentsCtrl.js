@@ -6,14 +6,14 @@ app.controller("displayCommentsCtrl", function($scope, $http, $route, $routePara
 
   var displayComments = function(userComments) {
 
-    commentsArr = commentsService.getComments();
+    var allReviews = commentsService.getComments();
+    var commentsArr = allReviews.comments;
     $scope.comments = [];
-    console.log("displayComments: ", commentsArr);
       //loop through comments array and attach userinput to scope for ones matching business id
       for(var i = 0; i < commentsArr.length; i++) {
         if($route.current.params.businessid === commentsArr[i].businessid) {
           $scope.comments.push(commentsArr[i].userinput);
-          console.log($scope.comments);
+          // console.log($scope.comments);
         }
       }
   };

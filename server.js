@@ -15,7 +15,7 @@ app.get("/api/comments", function(req, res) {
 //YELP CALL
 
 //DELETE THE KEYS
-var clientId =
+
 
 
 //search api

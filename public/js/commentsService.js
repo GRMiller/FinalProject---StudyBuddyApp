@@ -87,19 +87,90 @@ app.factory("commentsService", function(){
               groups:5
             }
           }
+        }
+      ],
+      allRates: [
+        {
+          businessid: "grand-circus-detroit",
+          noise: [3, 4],
+          crowd: [2, 4],
+          size: [5, 5],
+          outlets: [5, 5],
+          groups: [5, 5]
         },
-      ]
+        {
+          businessid: "ashe-supply-co-detroit-2",
+          noise: [3, 3],
+          crowd: [3, 4],
+          size: [2, 3],
+          outlets: [2, 2],
+          groups: [4, 2]
+        },
+        {
+          businessid: "astro-coffee-detroit",
+          noise: [5],
+          crowd: [4],
+          size: [3],
+          outlets: [3],
+          groups: [2]
+        },
+        {
+          businessid: "great-lakes-coffee-roasting-company-detroit",
+          noise: [5],
+          crowd: [4],
+          size: [3],
+          outlets: [3],
+          groups: [2]
+        }
+      ],
+      avgRates: []
     };
 
+function avgOfRates(array) {
+  var sum;
+  array.reduce(function(a, b) {
+    sum = a + b;
+    return sum;
+  }, 0);
+  var avg = sum/array.length;
+  return avg;
+}
+//calculates averages for each business
+function getAverage() {
+  userComments.avgRates = [];
+  for(var k = 0; k < userComments.allRates.length; k++) {
+    userComments.avgRates.push(
+      {
+       businessid: userComments.allRates[k].businessid,
+       noise: avgOfRates(userComments.allRates[k].noise),
+       crowd: avgOfRates(userComments.allRates[k].crowd),
+       size: avgOfRates(userComments.allRates[k].size),
+       outlets: avgOfRates(userComments.allRates[k].outlets),
+       groups: avgOfRates(userComments.allRates[k].groups)
+      }
+      );
+  }
+}
   return {
     setComments: function(reviews) {
       userComments.comments.push(reviews);
-      console.log("setComments: ", userComments.comments);
+      console.log(reviews);
+      for(var j =0; j < userComments.allRates.length; j++) {
+        if(userComments.allRates[j].businessid===reviews.businessid){
+          userComments.allRates[j].noise.push(Number(reviews.userinput.ratings.noise));
+          userComments.allRates[j].crowd.push(Number(reviews.userinput.ratings.crowd));
+          userComments.allRates[j].size.push(Number(reviews.userinput.ratings.size));
+          userComments.allRates[j].outlets.push(Number(reviews.userinput.ratings.outlets));
+          userComments.allRates[j].groups.push(Number(reviews.userinput.ratings.groups));
+          break;
+        }
+      }
     },
 
     getComments: function() {
-      console.log("getComments: ", userComments.comments);
-      return userComments.comments;
+      getAverage();
+      console.log(userComments.allRates);
+      return userComments;
     }
   };
 });

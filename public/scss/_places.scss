@@ -12,30 +12,38 @@
   max-width:100%;
 
   #business {
-    @include center;
-    max-width: 100%;
+
 
     img {
-      display:block;
-      max-width:45%;
+      display:inline-block;
+      max-width:50%;
       float:left;
+
     }
 
-    #bz_info {
-      display:block;
-      max-width:45%;
-      float:right;
-      margin-right: 10%;
-      margin-top: -3%;
-      line-height:1em;
-    }
+    #bz_information {
+      display:inline-block;
+      min-height: 100%;
+      max-width:20%;
+      margin-left: 5%;
+      line-height:0.75em;
 
-    #bz_details {
-      max-width:45%;
-      font-size:5em;
-    }
 
+
+    }
   }
+    //
+    // .clearfix {
+    //   clear:both;
+    // }
+
+  .comments {
+      @include center;
+      display:block;
+      margin-top: 200px;
+      clear:left;
+      width:80%;
+    }
 
 
 

@@ -1,24 +1,3 @@
-#place_view {
-  max-width: 100%; }
-  #place_view #business {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%; }
-    #place_view #business img {
-      display: block;
-      max-width: 45%;
-      float: left; }
-    #place_view #business #bz_info {
-      display: block;
-      max-width: 45%;
-      float: right;
-      margin-right: 10%;
-      margin-top: -3%;
-      line-height: 1em; }
-    #place_view #business #bz_details {
-      max-width: 45%;
-      font-size: 5em; }
-
 body {
   background-color: #becbe0;
   color: #4a5059; }
@@ -66,3 +45,23 @@ footer a {
   .result .ratings li {
     display: inline;
     width: auto; }
+
+#place_view {
+  max-width: 100%; }
+  #place_view #business img {
+    display: inline-block;
+    max-width: 50%;
+    float: left; }
+  #place_view #business #bz_information {
+    display: inline-block;
+    min-height: 100%;
+    max-width: 20%;
+    margin-left: 5%;
+    line-height: 0.75em; }
+  #place_view .comments {
+    display: block;
+    margin: 0 auto;
+    display: block;
+    margin-top: 200px;
+    clear: left;
+    width: 80%; }

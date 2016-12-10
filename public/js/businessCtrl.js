@@ -9,7 +9,7 @@ app.controller("businessCtrl",function($scope, $route, $routeParams, $http) {
 $scope.$on('$routeChangeSuccess', function () {
   $http.get('/api/business', {params: {id: businessid}}).success(function(response) {
     $scope.business = response;
-  }).error(function(userText){
+  }).error(function(){
     console.log("error");
   });
 });

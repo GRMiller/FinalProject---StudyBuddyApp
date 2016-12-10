@@ -2,7 +2,7 @@
 var app = angular.module("mainMod");
 
 //Displays Comments from commentService
-app.controller("displayCommentsCtrl", function($scope, $http,$route, $routeParams, commentsService, searchResultsService) {
+app.controller("displayCommentsCtrl", function($scope, $http, $route, $routeParams, commentsService, searchResultsService) {
 
   var displayComments = function(userComments) {
 

@@ -14,11 +14,17 @@ app.controller("getSearchCtrl", ["$scope", "$http", "searchResultsService", "com
       }
     }
 
-
   };
   $scope.$on('$routeChangeSuccess', function () {
     displayResults();
   });
+
+  $scope.sortBy = function(prop) {
+    $scope.remProp = "!"+prop;
+    $scope.prop = prop;
+
+  }
+
 
 }]);
 

@@ -1,16 +1,26 @@
 body {
   background-color: #becbe0;
+  background-image: url('images/distracted-studying.jpg');
   color: #4a5059;
+}
+
+nav {
+
 }
 
 #quote {
 font-style: italic;
+font-size: 1.25em;
+border-bottom: thick double;
 }
 
 .bioimg {
   width: 100%;
   border-radius: 100%;
   img:hover {
+=======
+
+    img:hover {
     opacity: .9;
   }
 }
@@ -21,6 +31,7 @@ figure {
   vertical-align: top;
   text-align: center;
 }
+
 footer a {
   text-decoration: none;
   color: inherit;

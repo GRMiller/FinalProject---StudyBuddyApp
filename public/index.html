@@ -12,10 +12,9 @@
   </head>
 
   <body>
-
+    <h1>Study Buddy</h1>
+    <h3>Helping you find the perfect place to study since 2016</h3>
     <nav>
-      <h1>Study Buddy</h1>
-      <h3>Your guide to learning...</h3>
       <a href="#/">Home</a>
       <a href="#/about">About</a>
     </nav>
@@ -23,10 +22,9 @@
 
     <section id="search_bar" ng-controller="searchCtrl">
 
-      <form >
-        <input type="text"  ng-model="userText.term" placeholder="Keywords" />
-        <input type="text"
-         ng-model="userText.location" placeholder="Location" />
+      <form>
+        <input type="text" ng-model="userText.term" placeholder="Keywords" />
+        <input type="text" ng-model="userText.location" placeholder="Location" />
         <input type="submit" value="Find" ng-click="userSearch(userText)"></input>
       </form>
 

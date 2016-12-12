@@ -17,7 +17,7 @@ app.get('/api/userSearch', function(req, res) {
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
     limit:40,
-    categories:"libraries,coffee,communitycenters,bagels,parks,publicplazas,beaches,collegeuniv,bubbletea,bakeries,eltern_cafes,tea",
+    categories:"libraries,coffee,communitycenters,bagels,parks,publicplazas,beaches,collegeuniv,vocation,bubbletea,bakeries,eltern_cafes,tea",
     term: req.query.term,
     location: req.query.location
   };

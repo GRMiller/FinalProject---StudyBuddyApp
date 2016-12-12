@@ -154,7 +154,6 @@ function getAverage() {
   return {
     setComments: function(reviews) {
       userComments.comments.push(reviews);
-      console.log(reviews);
       for(var j =0; j < userComments.allRates.length; j++) {
         if(userComments.allRates[j].businessid===reviews.businessid){
           userComments.allRates[j].noise.push(Number(reviews.userinput.ratings.noise));
@@ -168,7 +167,6 @@ function getAverage() {
 
     getComments: function() {
       getAverage();
-      console.log(userComments.allRates);
       return userComments;
     }
   };

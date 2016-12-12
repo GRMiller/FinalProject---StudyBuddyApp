@@ -18,7 +18,7 @@
       <a href="#/">Home</a>
       <a href="#/about">About</a>
     </nav>
-    
+
     <section id="search_bar" ng-controller="searchCtrl">
       <form>
         <input type="text" ng-model="userText.term" placeholder="Keywords" />
@@ -27,7 +27,7 @@
       </form>
     </section>
 
-    <section class="view">
+    <section ng-controller="indexCtrl" class="view" ng-hide="hidden">
       <ng-view></ng-view>
     </section>
 
@@ -38,6 +38,7 @@
   <script type="text/javascript" src="lib/Angular/angular.min.js"></script>
   <script type="text/javascript" src="lib/Angular/angular-route.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/indexCtrl.js"></script>
   <script type="text/javascript" src="js/setSearchCtrl.js"></script>
   <script type="text/javascript" src="js/getSearchCtrl.js"></script>
   <script type="text/javascript" src="js/searchResultsService.js"></script>

@@ -13,20 +13,17 @@ app.controller('timeCtrl', function ($scope){
     return hours + ':' + minutes + amPm;
   };
 
-  getFormattedTime("0000"); //function works
-  /* replace numeric entities*/
+  getFormattedTime("0000"); //test
 
 var miltime = document.getElementsByClassName('militarytime');
+
 console.log(miltime);
 
-miltime.forEach(getFormattedTime(miltime.textContent.toString()));
-
-
-  // var oldtime=document.getElementsByClassName('militarytime');
-  //   console.log(oldtime);
-  // oldtime.each(function() {
-  //   oldtime.text(getFormattedTime(oldtime).text());
-  // })
+// miltime.forEach(function(){
+//   var strmiltime = miltime.textContent();
+// });
+//
+// // console.log(strmiltime);
 });
 
 

@@ -7,6 +7,7 @@ var searchResults;
  return {
    setSearchResults: function(response) {
      searchResults = response.businesses;
+     console.log("srchRsltSrvce: ",searchResults);
      return searchResults;
    },
    getSearchResults: function() {

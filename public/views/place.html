@@ -5,19 +5,37 @@
     <div class="clearfix">
     </div>
     <div class="bz_info" id="bz_information">
+
       <h2 class="bz_info" id="bz_name">{{business.name}}</h2>
+
+      <div class="bz_info" id="bz_categories" ng-repeat="category in business.categories">
+        {{category.title}}
+      </div>
+
+      <map></map>
+
       <div id="location">
         <p class="bz_info" id="bz_address">{{business.location.address1}}</p>
         <span class="bz_info" id="bz_city">{{business.location.city}}</span>
         <span class="bz_info" id="bz_state">{{business.location.state}}</span>
         <span class="bz_info" id="bz_zipcode">{{business.location.zip_code}}</span>
       </div>
+
+
       <p class="bz_info" id="bz_phone">{{business.phone}}</p>
+
       <div class="bz_info" id="bz_hours" ng-controller="timeCtrl"ng-repeat="hour in business.hours">Hours:
-
-        <span class="is_open_{{hour.is_open_now}}"></span>
-
-          <p ng-repeat="day in hour.open"><span class="militarytime">{{day.start}}</span> - <span class="militarytime">{{day.end}}</span></p>
+        <span id="is_open_{{hour.is_open_now}}"></span>
+        <div id="hours_days">
+          Monday <br />
+          Tuesday<br />
+          Wednesday<br />
+          Thursday<br />
+          Friday<br />
+          Saturday<br />
+          Sunday<br />
+        </div>
+        <p ng-repeat="day in hour.open"><span class="militarytime">{{day.start}}</span> - <span class="militarytime">{{day.end}}</span></p>
       </div>
 
 

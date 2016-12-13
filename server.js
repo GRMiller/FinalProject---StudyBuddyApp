@@ -1,22 +1,17 @@
 var express = require('express');
 var app = express();
 var yelp = require('yelp-fusion');
-// var comment = require("./module");
 var body = require('body');
 var jsonBody = require('body/json');
 var http = require('http');
-
-//fake comments api
-app.get("/api/comments", function(req, res) {
-  res.send(comment.comments);
-});
 
 
 //YELP CALL
 
 //DELETE THE KEYS
-var clientId = "nXqD_i17OL-LeQYs9dD_og";
-var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
+
+
+
 
 
 //search api
@@ -24,8 +19,8 @@ app.get('/api/userSearch', function(req, res) {
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
     limit:40,
-    categories:"libraries,coffee,communitycenters,bagels,parks,publicplazas,beaches,collegeuniv,bubbletea,bakeries,eltern_cafes,tea",
     term: "good for working",
+    categories:"libraries,coffee,communitycenters,bagels,parks,publicplazas,beaches,collegeuniv,vocation,bubbletea,bakeries,eltern_cafes,tea",
     term: req.query.term,
     location: req.query.location
   };

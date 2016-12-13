@@ -1,66 +1,71 @@
 <div id="place_view">
 
   <section id="business">
-    <img class="bz_info" id="bz_img"ng-src="{{business.image_url}}" />
-    <div class="clearfix">
-    </div>
-    <div class="bz_info" id="bz_information">
+    <img id="bz_img"ng-src="{{business.image_url}}" />
+      <div class="clearfix"></div>
 
-      <h2 class="bz_info" id="bz_name">{{business.name}}</h2>
+    <div id="bz_information">
+      <h2 id="bz_name">{{business.name}}</h2>
 
-      <div class="bz_info" id="bz_categories" ng-repeat="category in business.categories">
+      <span id="bz_categories" ng-repeat="category in business.categories">
         {{category.title}}
+      </span>
+
+    <div id="location">
+      <div id="address">
+        <p id="bz_address">{{business.location.address1}}</p>
+        <span id="bz_city">{{business.location.city}}</span>
+        <span id="bz_state">{{business.location.state}}</span>
+        <span id="bz_zipcode">{{business.location.zip_code}}</span>
       </div>
 
-      <map></map>
-
-      <div id="location">
-        <p class="bz_info" id="bz_address">{{business.location.address1}}</p>
-        <span class="bz_info" id="bz_city">{{business.location.city}}</span>
-        <span class="bz_info" id="bz_state">{{business.location.state}}</span>
-        <span class="bz_info" id="bz_zipcode">{{business.location.zip_code}}</span>
-      </div>
-
-
-      <p class="bz_info" id="bz_phone">{{business.phone}}</p>
-
-      <div class="bz_info" id="bz_hours" ng-controller="timeCtrl"ng-repeat="hour in business.hours">Hours:
-        <span id="is_open_{{hour.is_open_now}}"></span>
-        <div id="hours_days">
-          Monday <br />
-          Tuesday<br />
-          Wednesday<br />
-          Thursday<br />
-          Friday<br />
-          Saturday<br />
-          Sunday<br />
+      <div ng-controller="mapCtrl">
+        <div id="map"></div>
+        <div id="marker">
+          <a id="map_name_container" href="#" ng-click="openInfoWindow($event,marker)">
+            <label id="map_name">{{marker.title}}</label>
+          </a>
         </div>
-        <p ng-repeat="day in hour.open"><span class="militarytime">{{day.start}}</span> - <span class="militarytime">{{day.end}}</span></p>
       </div>
+    </div>
+    <p id="bz_phone">{{business.phone}}</p>
 
-
-
-    </div> <!--open now?-->
+    <p>Open now: {{business.hours[0].is_open_now}}</p>
+      <table>
+        <tr ng-repeat="hour in hours track by $index">
+          <td>
+            {{hour.day}}
+          </td>
+          <td>
+            {{hour.start}}
+          </td>
+          <td>
+            {{hour.end}}
+          </td>
+        </tr>
+      </table>
+    </div>
   </section>
 
 
-  <!-- <section id='bz_details'>
+
+  <section id='bz_details'>
     <p>Details:</p>
     <ul>
-      <!- from yelp, boolean. they might not provide as much info as we had hoped... ->
       <li>Price: {{business.price}}</li>
-      <li>Wifi</li>
+      <!-- <li>Wifi</li>
       <li>Parking</li>
-      <li>Food</li> <!- anything in a food category ->
-      <!- from reviews, ranking 1-5, avg of everyone's ->
-      <li>Noise level</li>
-      <li>Crowd size</li>
-      <li>Size</li>
-      <li>Outlets</li>
-      <li>Food</li>
-      <li>Good for groups</li>
+      <li>Food</li> --><!-- anything in a food category -->
+      <!-- from reviews, ranking 1-5, avg of everyone's -->
+      <li>Noise level: {{ratings.noise}}</li>
+      <li>Crowd size: {{ratings.crowd}}</li>
+      <li>Size: {{ratings.size}}</li>
+      <li>Outlets: {{ratings.outlets}}</li>
+      <li>Good for groups: {{ratings.groups}}</li>
     </ul>
-  </section> -->
+  </section>
+
+
 
   <section class="comments" ng-controller="displayCommentsCtrl">
     <h2>Comments:</h2>
@@ -68,6 +73,8 @@
       <comments-section></comments-section>
     </div>
   </section>
+
+
 
   <section>
     <!-- Maybe make this a link to a different view or have a modal or something? -->

@@ -2,11 +2,11 @@
   <img ng-src="{{result.image_url}}" />
   <a href="#/place?businessid={{result.id}}"><h3>{{result.name}}</h3></a>
   <ul class="ratings">
-    <li>Noise level: {{result.userinput.ratings.noise}}</li>
-    <li>Crowd size: {{result.userinput.ratings.crowd}}</li>
-    <li>Size: {{result.userinput.ratings.size}}</li>
-    <li>Outlet availibility: {{result.userinput.ratings.outlets}}</li>
-    <li>Good for groups:{{result.userinput.ratings.groups}}</li>
+    <li>Noise level: {{result.noise}}</li>
+    <li>Crowd size: {{result.crowd}}</li>
+    <li>Size: {{result.size}}</li>
+    <li>Outlet availibility: {{result.outlets}}</li>
+    <li>Good for groups:{{result.groups}}</li>
   </ul>
   <ul>
     <li>{{result.location.address1}}</li>

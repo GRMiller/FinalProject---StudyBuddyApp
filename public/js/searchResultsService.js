@@ -2,7 +2,8 @@
 var app = angular.module("mainMod");
 
 app.factory("searchResultsService", function(){
-var searchResults;
+
+  var searchResults;
 
  return {
    setSearchResults: function(response) {

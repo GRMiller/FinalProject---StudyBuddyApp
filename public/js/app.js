@@ -1,6 +1,6 @@
 (function (){
 
-var app = angular.module("mainMod", ["ngRoute");
+var app = angular.module("mainMod", ["ngRoute"]);
 
 app.config(function($routeProvider){
   $routeProvider.when("/about", {

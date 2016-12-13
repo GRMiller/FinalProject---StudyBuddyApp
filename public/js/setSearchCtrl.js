@@ -1,11 +1,9 @@
 (function () {
 var app = angular.module("mainMod");
 
-app.controller("searchCtrl", ["$route", '$scope', "$http", "$location", "searchTermsService", "searchResultsService", function ($route, $scope, $http, $location, searchTermsService, searchResultsService) {
+app.controller("searchCtrl", ["$route", '$scope', "$http", "$location", "searchResultsService", function ($route, $scope, $http, $location, searchResultsService) {
   //function gets called on ng-click, in turn calls $http
   $scope.userSearch = function(userText) {
-      // searchTermsService.setSearchTerms(userText);
-
       $http.get('/api/userSearch', {params: {term: $scope.userText.term, location: $scope.userText.location}}).success(function(response, userText) {
         searchResultsService.setSearchResults(response);
         $location.path("/searchresults").url($location.path()); //switches view, removes ?businessid if it's there
@@ -15,23 +13,6 @@ app.controller("searchCtrl", ["$route", '$scope', "$http", "$location", "searchT
       });
 
   };
-
-
-
-
-  // function getLocation() {
-  //   console.log("location working");
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(showPosition);
-  //     console.log(position.coordinates.latitude + " " + position.coordinates.longitude);
-  //   }
-  // }
-  //
-  // function showPosition (position){
-  //   console.log("Latitude: " + position.coordinates.latitude + " Longitude: " + position.coordinates.longitude);
-  //   var latlon = position.coordinates.latitude + "," + position.coordinates.longitude;
-  // };
-
 
 }]);
 

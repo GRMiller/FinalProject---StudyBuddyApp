@@ -6,6 +6,26 @@ body {
   font-family: 'PT Sans', sans-serif;
   height: 100%; }
 
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: #333; }
+
+#title {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 5em; }
+
+#tagline {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em; }
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #a6a6a6;
@@ -51,9 +71,9 @@ figure {
   vertical-align: top;
   text-align: center; }
 
-footer a {
-  text-decoration: none;
-  color: inherit; }
+figcaption {
+  color: #333;
+  font-family: inherit; }
 
 .view {
   background-color: rgba(249, 249, 249, 0.75);

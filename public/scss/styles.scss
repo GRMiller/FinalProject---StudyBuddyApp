@@ -6,6 +6,7 @@ html {
 body {
   // background-color: #becbe0;
   color: #fff;
+  font-family: 'PT Sans', sans-serif;
   height: 100%;
 }
 
@@ -13,11 +14,49 @@ nav {
 
 }
 
-#quote {
-font-style: italic;
-font-size: 1.25em;
-border-bottom: thick double;
-}
+// blockquote {
+// font-style: italic;
+// font-size: 1.25em;
+// border-bottom: thick double;
+// }
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+    &:before {
+    color: #ccc;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    }
+      p {
+        font-family: 'Architects Daughter', cursive;
+        font-size: 2em;
+        color: #333;
+      }
+    }
+
+#about {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+    &:before {
+    color: #ccc;
+    font-size: 1.25em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    }
+      p {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 1.25em;
+        color: #333;
+      }
+    }
 
 .bioimg {
   width: 100%;

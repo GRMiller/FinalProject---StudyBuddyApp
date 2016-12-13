@@ -1,3 +1,4 @@
+@import "flex";
 
 @mixin center {
     display: block;
@@ -6,31 +7,40 @@
 
 #place_view {
   max-width:100%;
+  .name{
+    text-align: center;
+    ul {
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      padding: 0 10vw;
+    }
+  }
 
   li {
     list-style: none;
   }
-  #business {
 
-    img {
-      display:inline-block;
-      max-width:50%;
-      float:left;
-    }
-
-    #bz_information {
-      display:inline-block;
-      min-height: 100%;
-      max-width:20%;
-      margin-left: 5%;
-      line-height:0.75em;
+.comments {
+    @include center;
+    display:block;
+    clear:left;
+    width:90%;
+  }
+  .comment {
+    li {
+      display: inline-block;
     }
   }
-
-  .comments {
+  h3 {
+    text-align: center;
+  }
+  form {
+    @include center;
+    width: 80%;
+    .submit {
       @include center;
-      display:block;
-      clear:left;
-      width:80%;
     }
+  }
 }

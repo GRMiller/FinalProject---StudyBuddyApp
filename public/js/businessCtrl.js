@@ -12,6 +12,37 @@ var app = angular.module("mainMod");
         $scope.business = response;
         timeStore.setTime(response);
         $scope.hours = timeStore.getTime();
+
+        // uses Yelp's business API to get coordinates for Google maps
+            var lat = $scope.business.coordinates.latitude;
+            var lng = $scope.business.coordinates.longitude;
+
+            var mapOptions = {
+              zoom:16,
+              center: new google.maps.LatLng(lat,lng),
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              mapTypeControl: false
+            }
+
+            //displays new map
+            $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions)
+
+            $scope.marker = [];
+            // var infoWindow = new google.maps.InfoWindow();
+
+            var createMarker = function (lat,lng) {
+
+              var marker= new google.maps.Marker ({
+                map:$scope.map,
+                position: new google.maps.LatLng(lat,lng),
+              });
+
+              $scope.marker.push(marker);
+            };
+
+            createMarker(lat,lng);
+
+
       }).error(function(){
         console.log("error");
       });

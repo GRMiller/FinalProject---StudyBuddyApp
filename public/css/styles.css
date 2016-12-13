@@ -2,18 +2,18 @@ html {
   height: 100%; }
 
 body {
-  color: #fff;
+  color: #333;
   font-family: 'PT Sans', sans-serif;
   height: 100%; }
 
 blockquote {
   background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  border-left: 10px solid #a6a6a6;
   margin: 1.5em 10px;
   padding: 0.5em 10px; }
   blockquote:before {
     color: #ccc;
-    font-size: 2em;
+    font-size: 1.25em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em; }
@@ -56,7 +56,7 @@ footer a {
   color: inherit; }
 
 .view {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(249, 249, 249, 0.75);
   width: 90%;
   margin: 20px auto;
   padding: 2em;
@@ -93,28 +93,26 @@ header {
   z-index: -1; }
 
 .result {
-  text-align: center;
-  background-color: #f7f7f7;
-  border: 1px solid #373c44;
-  margin: 1em auto;
-  width: 90%;
-  position: relative; }
+  background: #f9f9f9;
+  border-left: 10px solid #a6a6a6;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px; }
+  .result:before {
+    color: #ccc;
+    font-size: 1.25em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em; }
   .result button {
     display: inline-block; }
-  .result img {
-    max-height: 100%;
-    max-width: 100%;
-    float: left;
-    display: block;
-    position: absolute; }
   .result ul {
     list-style: none;
     padding: 0; }
   .result a {
-    color: #4a5059;
+    color: inherit;
     text-decoration: none; }
     .result a:hover {
-      color: #859dc4; }
+      color: #a6a6a6; }
   .result .ratings li {
     display: inline;
     width: auto; }
@@ -143,22 +141,22 @@ header {
   .info-obj td {
     padding: 1vw 1vw 0 0; }
 
-.img-block div {
-  position: relative; }
-
-.img-block ul {
-  display: inline-block;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  z-index: 1; }
-
-.img-block li {
-  display: inline-block;
-  padding: 0 4vw;
-  text-align: center;
-  width: auto;
-  margin: 0 auto; }
+.img-block {
+  color: #ccc; }
+  .img-block div {
+    position: relative; }
+  .img-block ul {
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    z-index: 1; }
+  .img-block li {
+    display: inline-block;
+    padding: 0 4vw;
+    text-align: center;
+    width: auto;
+    margin: 0 auto; }
 
 .map-block p {
   text-align: center;
@@ -205,8 +203,21 @@ header {
     display: block;
     clear: left;
     width: 90%; }
-  #place_view .comment li {
-    display: inline-block; }
+  #place_view .comment {
+    background: #f9f9f9;
+    border-left: 10px solid #a6a6a6;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px; }
+    #place_view .comment:before {
+      color: #ccc;
+      font-size: 1.25em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em; }
+    #place_view .comment li {
+      display: block;
+      margin: 0 auto;
+      display: inline-block; }
   #place_view h3 {
     text-align: center; }
   #place_view form {

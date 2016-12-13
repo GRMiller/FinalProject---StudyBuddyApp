@@ -29,7 +29,9 @@
     width:90%;
   }
   .comment {
+    @include quote;
     li {
+      @include center;
       display: inline-block;
     }
   }

@@ -10,15 +10,37 @@ body {
   height: 100%;
 }
 
+@mixin header {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: #333;
+}
+
+h1, h2, h3 {
+  @include header;
+}
+
+#title {
+  background-color: rgba(255,255,255,.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em;
+  //box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 5em;
+}
+
+#tagline {
+  background-color: rgba(255,255,255,.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em;
+}
+
 nav {
 
 }
-
-// blockquote {
-// font-style: italic;
-// font-size: 1.25em;
-// border-bottom: thick double;
-// }
 
 blockquote {
   background: #f9f9f9;
@@ -74,10 +96,15 @@ figure {
   text-align: center;
 }
 
-footer a {
-  text-decoration: none;
-  color: inherit;
+figcaption {
+  color: #333;
+  font-family: inherit;
 }
+
+// footer a {
+//   text-decoration: none;
+//   color: inherit;
+// }
 
 .view {
   background-color: rgba(255,255,255,.5);

@@ -22,6 +22,34 @@ body {
   height: 100%;
 }
 
+@mixin header {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: #333;
+}
+
+h1, h2, h3 {
+  @include header;
+}
+
+#title {
+  background-color: rgba(255,255,255,.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em;
+  //box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 5em;
+}
+
+#tagline {
+  background-color: rgba(255,255,255,.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em;
+}
+
 nav {
 
 }
@@ -36,23 +64,13 @@ blockquote {
     }
 
 #about {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-    &:before {
-    color: #ccc;
+  @include quote;
+  p {
+    font-family: 'PT Sans', sans-serif;
     font-size: 1.25em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-    }
-      p {
-        font-family: 'PT Sans', sans-serif;
-        font-size: 1.25em;
-        color: #333;
-      }
-    }
+    color: #333;
+  }
+}
 
 .bioimg {
   width: 100%;
@@ -70,10 +88,15 @@ figure {
   text-align: center;
 }
 
-footer a {
-  text-decoration: none;
-  color: inherit;
+figcaption {
+  color: #333;
+  font-family: inherit;
 }
+
+// footer a {
+//   text-decoration: none;
+//   color: inherit;
+// }
 
 .view {
   background-color: rgba(249, 249, 249,.75);

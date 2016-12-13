@@ -2,19 +2,17 @@
     <section class="name">
       <h2>{{business.name}}</h2>
       <ul>
+        <li ng-repeat="category in business.categories">{{category.title}}</li>
+      </ul>
+      <ul>
         <li>{{business.phone}}</li>
         <li>Open now: {{business.hours[0].is_open_now}}</li>
       </ul>
     </section>
 
 <section id="info">
-    <section class="info-obj img-block">
-      <div>
-        <ul>
-          <li ng-repeat="category in business.categories">{{category.title}}</li>
-        </ul>
-        <img ng-src="{{business.image_url}}" />
-      </div>
+    <section class="info-obj">
+      <img ng-src="{{business.image_url}}" />
     </section>
 
     <section class="info-obj map-block">
@@ -48,20 +46,29 @@
     </section>
 
   <section class="info-obj">
-    <h3>Details:</h3>
-    <ul>
-      <li>Price: {{business.price}}</li>
-      <!-- <li>Wifi</li>
-      <li>Parking</li>
-      <li>Food</li> --><!-- anything in a food category -->
-      <!-- from reviews, ranking 1-5, avg of everyone's -->
-      <li>Noise level: {{ratings.noise}}</li>
-      <li>Crowd size: {{ratings.crowd}}</li>
-      <li>Size: {{ratings.size}}</li>
-      <li>Outlets: {{ratings.outlets}}</li>
-      <li>Good for groups: {{ratings.groups}}</li>
-    </ul>
-  </section>
+    <table>
+      <th colspan="2">Details:</th>
+      <tr>
+        <td>Price:</td>
+        <td>{{business.price}}</td>
+      </tr>
+      <tr>
+        <td>Noise:</td>
+        <td>{{ratings.noise}}</td>
+      </tr>
+      <tr>
+        <td>Crowd:</td>
+        <td>{{ratings.crowd}}</td>
+      </tr>
+      <tr>
+        <td>Outlets:</td>
+        <td>{{ratings.outlets}}</td>
+      </tr>
+      <tr>
+        <td>Good for groups:</td>
+        <td>{{ratings.groups}}</td>
+      </tr>
+    </table>
 </section>
 
 
@@ -72,9 +79,7 @@
     </div>
   </section>
 
-
-
-  <section>
+  <section id="form-section">
     <h3>Leave a rating for {{business.name}}!</h3>
     <business-form></business-form>
   </section>

@@ -6,6 +6,26 @@ body {
   font-family: 'PT Sans', sans-serif;
   height: 100%; }
 
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: #333; }
+
+#title {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 5em; }
+
+#tagline {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  margin: 10px auto;
+  padding: 1em; }
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #a6a6a6;
@@ -24,7 +44,7 @@ blockquote {
 
 #about {
   background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  border-left: 10px solid #a6a6a6;
   margin: 1.5em 10px;
   padding: 0.5em 10px; }
   #about:before {
@@ -51,9 +71,9 @@ figure {
   vertical-align: top;
   text-align: center; }
 
-footer a {
-  text-decoration: none;
-  color: inherit; }
+figcaption {
+  color: #333;
+  font-family: inherit; }
 
 .view {
   background-color: rgba(249, 249, 249, 0.75);
@@ -152,26 +172,19 @@ header {
     position: relative;
     z-index: 0; }
   .info-obj table {
+    background: #f9f9f9;
+    border-left: 10px solid #a6a6a6;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
     margin: 0 auto; }
+    .info-obj table:before {
+      color: #ccc;
+      font-size: 1.25em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em; }
   .info-obj td {
     padding: 1vw 1vw 0 0; }
-
-.img-block {
-  color: #ccc; }
-  .img-block div {
-    position: relative; }
-  .img-block ul {
-    display: inline-block;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    z-index: 1; }
-  .img-block li {
-    display: inline-block;
-    padding: 0 4vw;
-    text-align: center;
-    width: auto;
-    margin: 0 auto; }
 
 .map-block p {
   text-align: center;
@@ -205,11 +218,15 @@ header {
   max-width: 100%; }
   #place_view .name {
     text-align: center; }
+    #place_view .name h2 {
+      margin: 0; }
     #place_view .name ul {
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
     #place_view .name li {
       display: inline-block;
-      padding: 0 10vw; }
+      padding: 0 2em;
+      margin: .5em 0; }
   #place_view li {
     list-style: none; }
   #place_view .comments {
@@ -229,16 +246,29 @@ header {
       line-height: 0.1em;
       margin-right: 0.25em;
       vertical-align: -0.4em; }
-    #place_view .comment li {
+    #place_view .comment ul {
       display: block;
       margin: 0 auto;
-      display: inline-block; }
+      text-align: center;
+      padding: 0;
+      width: auto; }
+    #place_view .comment li {
+      display: inline-block;
+      padding: 0 .5em; }
   #place_view h3 {
     text-align: center; }
   #place_view form {
-    display: block;
-    margin: 0 auto;
-    width: 80%; }
+    width: 100%; }
+    #place_view form fieldset {
+      background-color: #f9f9f9;
+      border-color: #a6a6a6; }
+      #place_view form fieldset textarea {
+        min-width: 50vw;
+        height: 20vh; }
     #place_view form .submit {
       display: block;
       margin: 0 auto; }
+  #place_view #form-section {
+    width: 80%;
+    display: block;
+    margin: 0 auto; }

@@ -9,12 +9,17 @@
   max-width:100%;
   .name{
     text-align: center;
+    h2 {
+      margin: 0;
+    }
     ul {
       padding: 0;
+      margin: 0;
     }
     li {
       display: inline-block;
-      padding: 0 10vw;
+      padding: 0 2em;
+      margin: .5em 0;
     }
   }
 
@@ -30,19 +35,36 @@
   }
   .comment {
     @include quote;
-    li {
+    ul {
       @include center;
+      text-align: center;
+      padding: 0;
+      width: auto;
+    }
+    li {
       display: inline-block;
+      padding: 0 .5em;
     }
   }
   h3 {
     text-align: center;
   }
   form {
-    @include center;
-    width: 80%;
+    width: 100%;
+    fieldset {
+      background-color: #f9f9f9;
+      border-color: #a6a6a6;
+      textarea {
+        min-width: 50vw;
+        height: 20vh;
+      }
+    }
     .submit {
       @include center;
     }
+  }
+  #form-section {
+    width: 80%;
+    @include center;
   }
 }

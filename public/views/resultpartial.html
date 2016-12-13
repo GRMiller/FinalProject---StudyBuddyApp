@@ -1,18 +1,17 @@
 <section class="result">
-  <img ng-src="{{result.image_url}}" />
   <a href="#/place?businessid={{result.id}}"><h3>{{result.name}}</h3></a>
   <ul class="ratings">
     <li>Noise level: {{result.noise}}</li>
     <li>Crowd size: {{result.crowd}}</li>
     <li>Size: {{result.size}}</li>
     <li>Outlet availibility: {{result.outlets}}</li>
-    <li>Good for groups:{{result.groups}}</li>
+    <li>Good for groups: {{result.groups}}</li>
+    <li>Price: {{result.price}}</li>
   </ul>
   <ul>
     <li>{{result.location.address1}}</li>
     <li>{{result.location.city}}, {{result.location.state}} {{result.location.zip_code}}</li>
     <li>{{result.phone}}</li>
-    <li>Price: {{result.price}}</li>
   </ul>
 
 </section>

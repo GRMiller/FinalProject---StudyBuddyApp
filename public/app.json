@@ -1,0 +1,5 @@
+{
+ "name": "heroku-json-server",
+ "description": "Deploying JSON Server to Heroku",
+ "image": "heroku/nodejs"
+}

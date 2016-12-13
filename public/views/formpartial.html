@@ -1,5 +1,6 @@
 <form name="ratings" ng-controller="getCommentsCtrl">
-  <p>Fields marked with a * are required</p>
+  <fieldset>
+  <legend>Fields marked with a * are required</legend>
   <p>*Name:</p>
   <p><input ng-required="true" type="text" name="userName" ng-model="reviews.username" placeholder="Your Name" /></p>
   <label>*Noise Level:
@@ -49,5 +50,6 @@
   </label>
   <p>Comment:</p>
   <textarea cols="60" rows="15" placeholder="Leave a comment or review!" ng-model="reviews.comment"></textarea>
-  <input type="submit" ng-disabled="ratings.$invalid" ng-click="receiveComments(reviews)">
+  <input class="submit" type="submit" ng-disabled="ratings.$invalid" ng-click="receiveComments(reviews)">
+  </fieldset>
 </form>

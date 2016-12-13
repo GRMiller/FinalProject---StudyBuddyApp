@@ -1,25 +1,26 @@
-<div id="place_view">
+<section id="place_view">
+    <section class="name">
+      <h2>{{business.name}}</h2>
+      <ul>
+        <li>{{business.phone}}</li>
+        <li>Open now: {{business.hours[0].is_open_now}}</li>
+      </ul>
+    </section>
 
-  <section id="business">
-    <img id="bz_img"ng-src="{{business.image_url}}" />
-      <div class="clearfix"></div>
-
-    <div id="bz_information">
-      <h2 id="bz_name">{{business.name}}</h2>
-
-      <span id="bz_categories" ng-repeat="category in business.categories">
-        {{category.title}}
-      </span>
-
-    <div id="location">
-      <div id="address">
-        <p id="bz_address">{{business.location.address1}}</p>
-        <span id="bz_city">{{business.location.city}}</span>
-        <span id="bz_state">{{business.location.state}}</span>
-        <span id="bz_zipcode">{{business.location.zip_code}}</span>
+<section id="info">
+    <section class="info-obj img-block">
+      <div>
+        <ul>
+          <li ng-repeat="category in business.categories">{{category.title}}</li>
+        </ul>
+        <img ng-src="{{business.image_url}}" />
       </div>
+    </section>
 
-      <div ng-controller="mapCtrl">
+    <section class="info-obj map-block">
+      <div>
+        <p>{{business.location.address1}}</p>
+        <p>{{business.location.city}} {{business.location.state}}, {{business.location.zip_code}}</p>
         <div id="map"></div>
         <div id="marker">
           <a id="map_name_container" href="#" ng-click="openInfoWindow($event,marker)">
@@ -27,11 +28,11 @@
           </a>
         </div>
       </div>
-    </div>
-    <p id="bz_phone">{{business.phone}}</p>
+    </section>
 
-    <p>Open now: {{business.hours[0].is_open_now}}</p>
+    <section class="info-obj">
       <table>
+        <th colspan="3">Hours:</th>
         <tr ng-repeat="hour in hours track by $index">
           <td>
             {{hour.day}}
@@ -44,13 +45,10 @@
           </td>
         </tr>
       </table>
-    </div>
-  </section>
+    </section>
 
-
-
-  <section id='bz_details'>
-    <p>Details:</p>
+  <section class="info-obj">
+    <h3>Details:</h3>
     <ul>
       <li>Price: {{business.price}}</li>
       <!-- <li>Wifi</li>
@@ -64,12 +62,12 @@
       <li>Good for groups: {{ratings.groups}}</li>
     </ul>
   </section>
-
+</section>
 
 
   <section class="comments" ng-controller="displayCommentsCtrl">
     <h2>Comments:</h2>
-    <div ng-repeat="comment in comments">
+    <div class="comment" ng-repeat="comment in comments">
       <comments-section></comments-section>
     </div>
   </section>
@@ -77,8 +75,7 @@
 
 
   <section>
-    <!-- Maybe make this a link to a different view or have a modal or something? -->
-    <p>Leave a rating for {{business.name}}!</p>
+    <h3>Leave a rating for {{business.name}}!</h3>
     <business-form></business-form>
   </section>
-</div>
+</section>

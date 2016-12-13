@@ -1,13 +1,9 @@
-    <h3>
-      <span>{{comment.username}} </span>says:
-    </h3>
-
-    <p id="user_comment">{{comment.comment}}</p>
-
-    <span>
-      <span>Crowds: {{comment.ratings.crowd}}</span>
-      <span>Good for Groups: {{comment.ratings.groups}}</span>
-      <span>Noisiness: {{comment.ratings.noise}}</span>
-      <span>Outlet Availability: {{comment.ratings.outlets}}</span>
-      <span>Size: {{comment.ratings.crowd}}</span>
-    </span>
+<h3>{{comment.username}} says:</h3>
+<ul>
+  <li>Crowds: {{comment.ratings.crowd}}</li>
+  <li>Good for Groups: {{comment.ratings.groups}}</li>
+  <li>Noisiness: {{comment.ratings.noise}}</li>
+  <li>Outlet Availability: {{comment.ratings.outlets}}</li>
+  <li>Size: {{comment.ratings.crowd}}</li>
+</ul>
+<p>{{comment.comment}}</p>

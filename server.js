@@ -24,7 +24,6 @@ app.get('/api/userSearch', function(req, res) {
     term: "good for working",
     categories:"libraries,coffee,communitycenters,bagels,parks,publicplazas,beaches,collegeuniv,vocation,bubbletea,eltern_cafes,tea",
     term: req.query.term,
-    term: req.query.libraries,
     location: req.query.location
   };
   //begin call

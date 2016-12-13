@@ -134,7 +134,7 @@ app.factory("commentsService", function(){
           businessid: "coffee-and-detroit-3",
           userinput: {
             username: "Yoda",
-            comment: "Peacefulness and productivity, you will find here",
+            comment: "Peacefulness and productivity, find here you will",
             ratings: {
               noise: 2,//1-5
               crowd: 2,//1-5
@@ -176,7 +176,7 @@ app.factory("commentsService", function(){
           businessid: "the-office-coffee-shop-royal-oak",
           userinput: {
             username: "April Ludgate",
-            comment: "There's spiders in their coffee. THIS PLACE IS THE BEST EVER!!!",
+            comment: "There's spiders in their coffee here. THIS PLACE IS THE BEST EVER!!!",
             ratings: {
               noise: 5,//1-5
               crowd: 5,//1-5
@@ -260,7 +260,7 @@ app.factory("commentsService", function(){
           businessid: "detroit-institute-of-bagels-detroit-2",
           userinput: {
             username: "Ron Swanson",
-            comment: "People are polite, but they leave me alone. I like it. I can get a lot done... And they put extra bacon on my egg sandwhich for me",
+            comment: "People are nice here. They leave me alone. I like it. I can get a lot done... And they put extra bacon on my egg sandwhich",
             ratings: {
               noise: 3,//1-5
               crowd: 3,//1-5

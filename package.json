@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/GRMiller/StudyBuddyApp/issues"
   },
+  "engines": {
+    "node": "7.1.0"
+  },
   "homepage": "https://github.com/GRMiller/StudyBuddyApp#readme"
 }

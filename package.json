@@ -5,7 +5,8 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.14.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "heroku": "^0.2.0"
   },
   "devDependencies": {
     "body": "^5.1.0",

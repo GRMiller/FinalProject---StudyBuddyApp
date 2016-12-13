@@ -148,7 +148,7 @@ app.factory("commentsService", function(){
           businessid: "coffee-and-detroit-3",
           userinput: {
             username: "Garrett",
-            comment: "Really friendly staff and amazing food. The place is generally never crowded with a steady stream of regulars. They have big tables and lots of outlets. It's great for individual work or to for group meetups!"
+            comment: "Really friendly staff and amazing food. The place is generally never crowded with a steady stream of regulars. They have big tables and lots of outlets. It's great for individual work or to for group meetups!",
             ratings: {
               noise: 1,//1-5
               crowd: 3,//1-5
@@ -334,11 +334,11 @@ app.factory("commentsService", function(){
         },
         {
           businessid: "avalon-international-breads-detroit",
-          noise: [2][,]
-          crowd: [4][,]
-          size: [1][,]
-          outlets: [3][,]
-          groups: [3[]]
+          noise: [2],
+          crowd: [4],
+          size: [1],
+          outlets: [3],
+          groups: [3]
         },
         { //review7 - AVALON
           businessid: "avalon-international-breads-detroit",

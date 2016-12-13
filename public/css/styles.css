@@ -53,12 +53,14 @@ header {
   width: 50%;
   height: 100%;
   float: left;
-  background: url("../images/book.jpg"); }
+  background: url("../images/book.jpg") no-repeat center fixed;
+  background-size: cover; }
 
 #bg2 {
   height: 100%;
   width: 50%;
-  background: url("../images/coffee.jpg");
+  background: url("../images/coffee.jpg") no-repeat center center fixed;
+  background-size: cover;
   float: right;
   z-index: -1; }
 
@@ -109,6 +111,3 @@ header {
     display: block;
     clear: left;
     width: 80%; }
-  #place_view #map {
-    height:350px;
-    width:250px;}

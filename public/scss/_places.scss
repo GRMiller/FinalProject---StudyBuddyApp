@@ -1,22 +1,21 @@
-//DEFINE VARIABLES AND MIXINS
+
 @mixin center {
     display: block;
     margin:0 auto;
   }
 
-//EVERYTHING IS NESTED INSIDE CONTAINER DIV FOR THIS VIEW
 #place_view {
-
   max-width:100%;
 
+  li {
+    list-style: none;
+  }
   #business {
-
 
     img {
       display:inline-block;
       max-width:50%;
       float:left;
-
     }
 
     #bz_information {
@@ -25,15 +24,8 @@
       max-width:20%;
       margin-left: 5%;
       line-height:0.75em;
-
-
-
     }
   }
-    //
-    // .clearfix {
-    //   clear:both;
-    // }
 
   .comments {
       @include center;
@@ -41,8 +33,4 @@
       clear:left;
       width:80%;
     }
-
-
-
-
 }

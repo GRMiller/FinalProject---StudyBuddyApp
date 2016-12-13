@@ -53,12 +53,12 @@ header {
   width: 50%;
   height: 100%;
   float: left;
-  background: url("../images/distracted-studying.jpg"); }
+  background: url("../images/book.jpg"); }
 
 #bg2 {
   height: 100%;
   width: 50%;
-  background-color: #becbe0;
+  background: url("../images/coffee.jpg");
   float: right;
   z-index: -1; }
 
@@ -91,6 +91,8 @@ header {
 
 #place_view {
   max-width: 100%; }
+  #place_view li {
+    list-style: none; }
   #place_view #business img {
     display: inline-block;
     max-width: 50%;

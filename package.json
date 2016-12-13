@@ -6,7 +6,9 @@
   "dependencies": {
     "express": "^4.14.0",
     "gulp": "^3.9.1",
-    "heroku": "^0.2.0"
+    "heroku": "^0.2.0",
+    "yelp-fusion": "^1.0.3",
+    "body": "^5.1.0"
   },
   "devDependencies": {
     "body": "^5.1.0",

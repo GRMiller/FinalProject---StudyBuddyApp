@@ -10,18 +10,21 @@ var http = require('http');
 
 //DELETE THE KEYS
 
-
+var clientId = "nXqD_i17OL-LeQYs9dD_og";
+var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
 
 
 
 //search api
 app.get('/api/userSearch', function(req, res) {
+  console.log(res);
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
     limit:40,
     term: "good for working",
-    categories:"libraries,coffee,communitycenters,bagels,parks,publicplazas,beaches,collegeuniv,vocation,bubbletea,bakeries,eltern_cafes,tea",
+    categories:"libraries,coffee,communitycenters,bagels,parks,publicplazas,beaches,collegeuniv,vocation,bubbletea,eltern_cafes,tea",
     term: req.query.term,
+    term: req.query.libraries,
     location: req.query.location
   };
   //begin call

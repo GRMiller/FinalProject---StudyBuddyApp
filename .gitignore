@@ -11,3 +11,5 @@ node_modules/
 
 dummyplace.html
 dummyplace_files/
+
+server.js

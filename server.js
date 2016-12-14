@@ -9,7 +9,8 @@ var http = require('http');
 //YELP CALL
 
 //DELETE THE KEYS
-
+var clientId = "nXqD_i17OL-LeQYs9dD_og";
+var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
 
 //search api
 app.get('/api/userSearch', function(req, res) {
@@ -38,7 +39,6 @@ app.get('/api/business', function(req, res) {
     const client = yelp.client(response.jsonBody.access_token);
 
     client.business(req.query.id).then(response => {
-      console.log(response);
       res.send(response.jsonBody);
     }).catch(e => {
       console.log(e);

@@ -29,8 +29,10 @@
   button {
     background-color: #f9f9f9;
     color: #333;
+    font-family: inherit;
     &:hover {
-      background-color: #ccc;
+      background-color: rgb(21, 138, 180);
+      color:white;
     }
   }
   .left {
@@ -45,6 +47,7 @@
     margin-right: .25em;
   }
   .active {
-    background-color: #ccc;
+    background-color: rgb(21, 138, 180);
+    color:white;
   }
 }

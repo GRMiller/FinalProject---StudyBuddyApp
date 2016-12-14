@@ -63,16 +63,20 @@
       }
     }
     input[type=submit]:disabled {
+      background-color: #f9f9f9;
       color: #bbb;
+      border: 1px solid #a6a6a6;
+      font-family: inherit;
     }
     input[type=radio] {
       color: red;
     }
     .submit {
       @include center;
-      background-color: #f9f9f9;
-      color: #333;
-      border: 1px solid #a6a6a6;
+      background-color: rgb(21, 138, 180);
+      color:white;
+      font-family: inherit;
+      border: 1px solid rgb(21, 138, 180);
       border-radius: 10px;
     }
   }

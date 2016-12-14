@@ -65,6 +65,12 @@ blockquote {
   .bioimg:hover {
     opacity: 1; }
 
+footer {
+  text-align: center; }
+
+a {
+  text-decoration: none; }
+
 figure {
   display: inline-block;
   width: 10%;

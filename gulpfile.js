@@ -72,3 +72,5 @@ gulp.task('compress', function() {
     }))
     .pipe(gulp.dest('./public/jsmin'))
 });
+
+gulp.task('default', ['serve']);

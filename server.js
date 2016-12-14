@@ -17,7 +17,6 @@ var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfU
 
 //search api
 app.get('/api/userSearch', function(req, res) {
-  console.log(res);
   //define object with userinput to pass as parameters for yelp search
   var searchParams = {
     limit:40,

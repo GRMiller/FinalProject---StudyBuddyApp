@@ -22,19 +22,21 @@
 
   <body>
     <header class="index_nav">
-      <h1 id="title">Study Buddy</h1>
-
       <nav>
-        <a href="#/">Home</a>
-        <a href="#/about">About</a>
+        <a id="nav_about" href="#/about">About</a>
+
+        <div id="title_container">
+          <a id="title" href="#/"><h1>Study Buddy</h1></a>
+          <h3>Find your perfect study spot!</h3>
+        </div>
       </nav>
-      <h3 id="tagline">Find <span>your</span> study zone!</h3>
+
       <form ng-controller="searchCtrl">
-        <input type="text" ng-model="userText.term" placeholder="Keywords" /> +
+        <input type="text" ng-model="userText.term" placeholder="Keywords" /> <span id="plus_sign">+</span>
         <input type="text" ng-model="userText.location" placeholder="Location" />
-        <input class="submit" type="submit" value="Find" ng-click="userSearch(userText)"></input>
+        <input id="submit_btn" class="submit" type="submit" value="Get Results" ng-click="userSearch(userText)"></input>
       </form>
-      </header>
+    </header>
 
     <section ng-controller="indexCtrl" class="view" ng-hide="hidden">
       <ng-view></ng-view>
@@ -55,7 +57,6 @@
   <script type="text/javascript" src="js/receiveCommentsCtrl.js"></script>
   <script type="text/javascript" src="js/displayCommentsCtrl.js"></script>
   <script type="text/javascript" src="js/commentsService.js"></script>
-  <script type="text/javascript" src="js/formatTime.js"></script>
   <script type="text/javascript" src="js/timeService.js"></script>
 
   </body>

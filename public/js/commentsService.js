@@ -479,7 +479,7 @@ function getAverage() {
        outlets: avgOfRates(userComments.allRates[k].outlets).toFixed(1),
        groups: avgOfRates(userComments.allRates[k].groups).toFixed(1)
       }
-      );
+    );
   }
 }
   return {
@@ -502,5 +502,4 @@ function getAverage() {
     }
   };
 });
-
 })();

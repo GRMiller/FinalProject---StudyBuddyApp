@@ -28,7 +28,6 @@ var app = angular.module("mainMod");
             $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions)
 
             $scope.marker = [];
-            // var infoWindow = new google.maps.InfoWindow();
 
             var createMarker = function (lat,lng) {
 
@@ -42,7 +41,6 @@ var app = angular.module("mainMod");
 
             createMarker(lat,lng);
 
-
       }).error(function(){
         console.log("error");
       });
@@ -53,7 +51,6 @@ var app = angular.module("mainMod");
           $scope.ratings = allReviews.avgRates[i];
         }
       }
-
     }); //end $on
   }]); //end controller
 })(); //end IFFE

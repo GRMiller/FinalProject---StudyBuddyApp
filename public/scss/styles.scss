@@ -12,6 +12,12 @@
     }
 }
 
+@mixin font {
+  font-family: 'PT Sans', sans-serif;
+  font-weight:bold;
+  color:#333;
+}
+
 html {
   height: 100%;
 }
@@ -29,28 +35,6 @@ body {
 
 h1, h2, h3 {
   @include header;
-}
-
-#title {
-  background-color: rgba(255,255,255,.5);
-  width: 50%;
-  margin: 10px auto;
-  padding: 1em;
-  //box-sizing: border-box;
-  font-family: 'Comfortaa', cursive;
-  font-weight: bold;
-  font-size: 5em;
-}
-
-#tagline {
-  background-color: rgba(255,255,255,.5);
-  width: 50%;
-  margin: 10px auto;
-  padding: 1em;
-}
-
-nav {
-
 }
 
 blockquote {
@@ -142,27 +126,9 @@ header {
   z-index: -1;
 }
 
-.index_nav {
-
-  a {
-    text-decoration:none;
-  }
-  h1 {
-    color:white;
-    font-weight:800;
-    font-size:3em;
-    text-shadow: 0px 0px 5px rgba(61,62,63,.7);
-  }
-  h3 {
-    color:white;
-
-    span {
-      font-weight:bolder;
-      transform: rotate(30deg);
-    }
-  }
-}
 
 @import "results";
 
 @import "places";
+
+@import "nav";

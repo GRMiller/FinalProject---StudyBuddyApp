@@ -72,9 +72,10 @@ var app = angular.module("mainMod");
       }
     ];
 
-    $scope.sortBy = function(prop) {
+    $scope.sortBy = function(prop, index) {
       $scope.remProp = "!"+prop;
       $scope.prop = prop;
+      $scope.selected = index;
     }
   }]);
 })();

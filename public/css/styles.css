@@ -288,7 +288,7 @@ header {
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
   color: #333;
-  position: fixed;
+  position: absolute;
   top: 4%;
   right: 5%; }
 

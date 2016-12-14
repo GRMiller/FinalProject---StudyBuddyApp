@@ -184,7 +184,8 @@ header {
   display: -webkit-flex;
   display: flex;
   padding: 1em;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
   .info-obj table {
     background: #f9f9f9;
     border-left: 10px solid #a6a6a6;

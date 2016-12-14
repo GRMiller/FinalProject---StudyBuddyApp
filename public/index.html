@@ -32,7 +32,7 @@
       </nav>
 
       <form ng-controller="searchCtrl">
-        <input type="text" ng-model="userText.term" placeholder="Keywords" /> <span id="plus_sign">+</span>
+        <input type="text" ng-model="userText.term" placeholder="Keywords" /> <span id="plus_sign"><img alt="plus sign image" src="images/plus-sign.png" /></span>
         <input type="text" ng-model="userText.location" placeholder="Location" />
         <input id="submit_btn" class="submit" type="submit" value="Get Results" ng-click="userSearch(userText)"></input>
       </form>

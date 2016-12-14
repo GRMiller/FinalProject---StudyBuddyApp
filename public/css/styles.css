@@ -329,7 +329,7 @@ header {
     outline: none; }
   .index_nav form input::-webkit-input-placeholder {
     font-family: "PT Sans", sans-serif;
-    color: #333;
+    color: #666666;
     padding: 2%; }
   .index_nav form img {
     max-width: 11px; }

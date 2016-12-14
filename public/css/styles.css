@@ -129,7 +129,8 @@ header {
     width: auto; }
 
 #buttons {
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   #buttons button {
     background-color: #f9f9f9;
     color: #333; }

@@ -1,11 +1,5 @@
 <section id="buttons">
-  <button class="left" ng-click="sortBy('+noise')">Quieter</button><button class="right" ng-click="sortBy('-noise')">Noisier</button>
-  <button class="left" ng-click="sortBy('+crowd')">Fewer People</button><button class="right" ng-click="sortBy('-crowd')">More People</button>
-  <button class="left" ng-click="sortBy('+size')">Smaller</button><button class="right" ng-click="sortBy('-size')">Larger</button>
-  <button class="left" ng-click="sortBy('+outlets')">Fewer Outlets</button><button class="right" ng-click="sortBy('-outlets')">More Outlets</button>
-  <button class="left" ng-click="sortBy('+groups')">Individual</button><button class="right" ng-click="sortBy('-groups')">Group</button>
-</section>
-<section>
+  <button ng-repeat="button in buttons" class="{{button.class}}" ng-click="sortBy(button.prop)">{{button.desc}}</button>
   <h2>Search Results:</h2>
   <div ng-repeat="result in results | orderBy:[remProp, prop]">
     <result-view></result-view>

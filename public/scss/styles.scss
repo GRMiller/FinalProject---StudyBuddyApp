@@ -36,7 +36,6 @@ h1, h2, h3 {
   width: 50%;
   margin: 10px auto;
   padding: 1em;
-  //box-sizing: border-box;
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
   font-size: 5em;
@@ -47,10 +46,6 @@ h1, h2, h3 {
   width: 50%;
   margin: 10px auto;
   padding: 1em;
-}
-
-nav {
-
 }
 
 blockquote {
@@ -92,11 +87,6 @@ figcaption {
   font-family: inherit;
 }
 
-// footer a {
-//   text-decoration: none;
-//   color: inherit;
-// }
-
 .view {
   background-color: rgba(249, 249, 249,.75);
   width: 90%;
@@ -115,7 +105,6 @@ header {
     display: block;
     margin: 0 auto;
   }
-
 }
 
 #container {

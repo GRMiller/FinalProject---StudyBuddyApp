@@ -10,7 +10,8 @@ var http = require('http');
 var clientId = "nXqD_i17OL-LeQYs9dD_og";
 var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
 //DELETE THE KEYS
-
+var clientId = "nXqD_i17OL-LeQYs9dD_og";
+var clientSecret = "iYnxPWwIOgz3NniNxgpmp71DyMOoGUgDrysgb67PC0DzOdy9W8BwWo39tTfUkthX";
 
 //search api
 app.get('/api/userSearch', function(req, res) {

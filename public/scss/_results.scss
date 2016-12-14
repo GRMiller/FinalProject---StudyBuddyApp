@@ -22,8 +22,10 @@
     }
   }
 }
+
 #buttons {
   text-align: center;
+  width: 100%;
   button {
     background-color: #f9f9f9;
     color: #333;
@@ -35,10 +37,12 @@
     border-radius: 10px 0 0 10px;
     border: 1px solid #a6a6a6;
     border-right: 0px;
+    margin-left: .25em;
   }
   .right {
     border-radius: 0 10px 10px 0;
     border: 1px solid #a6a6a6;
+    margin-right: .25em;
   }
   .active {
     background-color: #ccc;

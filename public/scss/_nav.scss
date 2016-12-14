@@ -3,7 +3,7 @@
     text-decoration: none;
   }
   #nav_about  {
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(249,249,249,.75);
     padding: 1vw;
     color:#333;
     @include font;
@@ -35,12 +35,17 @@
       border-radius:1px;
       border: 0.2px solid black;
       box-shadow: 0px 2px 3px 2px rgba(79, 79, 79,.75);
-      background-color: rgba(255,255,255,.5);
+      background-color: rgba(249,249,249,.75);
     }
     input:focus {
       background-color: rgba(255,255,255,1);
       box-shadow: 0px 0px 0px 0px;
       outline:none;
+    }
+    input::-webkit-input-placeholder {
+      font-family: "PT Sans", sans-serif;
+      color:#333;
+      padding:2%;
     }
     img {
       max-width: 11px;
@@ -54,7 +59,7 @@
       font-family: 'Comfortaa', sans-serif;
       cursor:pointer;
     }
-    @media (max-width: 390px) {
+    @media (max-width: 400px) {
       #plus_sign {
         display:block;
       }

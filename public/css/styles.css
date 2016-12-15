@@ -66,6 +66,13 @@ figure {
 figcaption {
   color: #333;
   font-family: inherit; }
+  figcaption img {
+    width: 20%;
+    display: inline;
+    float: left; }
+  figcaption span {
+    display: inline;
+    text-align: right; }
 
 .view {
   background-color: rgba(249, 249, 249, 0.75);
@@ -133,17 +140,6 @@ header {
   text-align: center;
   width: 100%;
   outline: none; }
-  #buttons button {
-    background-color: #f9f9f9;
-    color: #333;
-    font-family: inherit; }
-    #buttons button:hover {
-      background-color: #158ab4;
-      color: white; }
-    #buttons button:active {
-      outline: none; }
-    #buttons button:focus {
-      outline: none; }
   #buttons .left {
     border-radius: 10px 0 0 10px;
     border: 1px solid #a6a6a6;
@@ -155,12 +151,16 @@ header {
     margin-right: .25em; }
   #buttons .active {
     background-color: #158ab4;
-    color: white;
-    outline: none; }
-  #buttons .left .active {
-    box-shadow: inset 1px 1px 2.5px 1px rgba(79, 79, 79, 0.75); }
-  #buttons .right .active {
-    box-shadow: inset -1px 1px 2.5px 1px rgba(79, 79, 79, 0.75); }
+    color: white; }
+  #buttons button {
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: inherit; }
+    #buttons button:hover {
+      background-color: #158ab4;
+      color: white; }
+    #buttons button:focus {
+      outline: none; }
 
 #info {
   width: 100%;

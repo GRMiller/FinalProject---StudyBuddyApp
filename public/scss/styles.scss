@@ -82,6 +82,15 @@ figure {
 figcaption {
   color: #333;
   font-family: inherit;
+  img {
+    width: 20%;
+    display: inline;
+    float: left;
+  }
+  span {
+    display: inline;
+    text-align: right;
+  }
 }
 
 .view {

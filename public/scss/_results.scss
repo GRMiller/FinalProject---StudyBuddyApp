@@ -37,6 +37,8 @@
     }
     &:active {
       outline:none;
+    &:focus {
+      outline: none;
     }
   }
   .left {

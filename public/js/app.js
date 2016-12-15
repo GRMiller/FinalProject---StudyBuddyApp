@@ -39,4 +39,15 @@
       replace: false
     }
   });
+
+  app.filter("tel", function() {
+    return function(num) {
+      var value = num.toString().trim().replace(/^\+/, '');
+      var city, prefix, line;
+      city = value.slice(1, 4);
+      prefix = value.slice(4, 7);
+      line = value.slice(7,11);
+      return "("+city+") "+prefix+"-"+line;
+    }
+  });
 })();

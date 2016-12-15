@@ -48,7 +48,6 @@ gulp.task("concat", function() {
 gulp.src([
   "./public/lib/angular/angular.min.js",
   "./public/lib/angular/angular-route.min.js",
-  //"lib/jquery/jquery.min.js",
   "./public/js/app.js",
   "./public/js/businessCtrl.js",
   "./public/js/commentsService.js",

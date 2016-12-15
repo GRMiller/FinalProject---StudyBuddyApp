@@ -5,11 +5,11 @@
 	flex-wrap: wrap;
 }
 .bus-img {
-	max-width: 100%;
+	width: 100%;
 }
 .info-obj {
 	width: 100%;
-	height: 50vh;
+	height: 20em;
 	display: -webkit-flex;
 	display: flex;
   padding: 1em;
@@ -27,7 +27,9 @@
   p {
     text-align: center;
     width: 100%;
+		height: auto;
     margin: 0;
+		font-weight: bold;
   }
   #map {
 		margin-top: 1em;
@@ -35,8 +37,9 @@
     width: 100%;
     height: 80%;
   }
-  div {
+  #fix {
     width: 100%;
+		height: 100%;
   }
 }
 

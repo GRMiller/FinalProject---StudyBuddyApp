@@ -5,9 +5,9 @@
         <li ng-repeat="category in business.categories">{{category.title}}</li>
       </ul>
       <ul>
-        <li>{{business.phone}}</li>
-        <li ng-hide="{{business.hours[0].is_open_now}}">Open now!</li>
-        <li ng-show="{{business.hours[0].is_open_now}}">Closed</li>
+        <li>{{business.phone | tel}}</li>
+        <li ng-show="business.hours[0].is_open_now">Open now!</li>
+        <li ng-hide="business.hours[0].is_open_now">Closed</li>
       </ul>
     </section>
 
@@ -17,7 +17,7 @@
     </section>
 
     <section class="info-obj map-block">
-      <div>
+      <div id="fix">
         <p>{{business.location.address1}}</p>
         <p>{{business.location.city}} {{business.location.state}}, {{business.location.zip_code}}</p>
         <div id="map"></div>

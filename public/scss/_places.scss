@@ -55,12 +55,22 @@
       background-color: #f9f9f9;
       // background-color: rgba(165,165,165,.75);
       border-color: #a6a6a6;
+      #userName {
+        border: 1px solid #a6a6a6;
+        border-radius:2px;
+        outline:none;
+        padding:.5%;
+        box-sizing:border-box;
+      }
+      .req_asterisk {
+        color: rgb(21, 138, 180);
+      }
       label.radio_label{
         display:block;
         line-height:1.5em;
       }
       span.radio_buttons {
-        @media (max-width:420) {
+        @media (max-width:420px) {
           display:block;
         }
       }
@@ -71,7 +81,7 @@
         min-width: 40vw;
         height: 17vh;
         border-radius: 3px;
-        border:1px solid black;
+        border:1px solid #a6a6a6;
         margin: 0px auto;
       }
       textarea:focus {

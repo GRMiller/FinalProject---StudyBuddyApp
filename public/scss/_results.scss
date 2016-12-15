@@ -37,10 +37,10 @@
     }
     &:active {
       outline:none;
+    }
     &:focus {
       outline: none;
     }
-  }
   .left {
     border-radius: 10px 0 0 10px;
     border: 1px solid #a6a6a6;
@@ -63,4 +63,5 @@
   .right .active {
     box-shadow: inset -1px 1px 2.5px 1px rgba(79,79,79,.75);
   }
+}
 }

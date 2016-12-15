@@ -59,6 +59,7 @@ a {
 figure {
   display: inline-block;
   width: 10%;
+  min-width: 150px;
   vertical-align: top;
   text-align: center; }
 
@@ -138,6 +139,8 @@ header {
     #buttons button:hover {
       background-color: #158ab4;
       color: white; }
+    #buttons button:focus {
+      outline: none; }
   #buttons .left {
     border-radius: 10px 0 0 10px;
     border: 1px solid #a6a6a6;
@@ -158,11 +161,11 @@ header {
   flex-wrap: wrap; }
 
 .bus-img {
-  max-width: 100%; }
+  width: 100%; }
 
 .info-obj {
   width: 100%;
-  height: 50vh;
+  height: 20em;
   display: -webkit-flex;
   display: flex;
   padding: 1em;
@@ -186,7 +189,9 @@ header {
 .map-block p {
   text-align: center;
   width: 100%;
-  margin: 0; }
+  height: auto;
+  margin: 0;
+  font-weight: bold; }
 
 .map-block #map {
   margin-top: 1em;
@@ -194,8 +199,9 @@ header {
   width: 100%;
   height: 80%; }
 
-.map-block div {
-  width: 100%; }
+.map-block #fix {
+  width: 100%;
+  height: 100%; }
 
 /*4 columns for very large screens */
 @media (min-width: 1367px) {

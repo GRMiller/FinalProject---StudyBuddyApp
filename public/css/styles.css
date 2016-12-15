@@ -277,31 +277,32 @@ header {
       #place_view form fieldset label.radio_label {
         display: block;
         line-height: 1.5em; }
-      #place_view form fieldset span.radio_buttons {
-        display: block; }
-    #place_view form legend {
-      background-color: #f9f9f9; }
-    #place_view form textarea {
-      min-width: 40vw;
-      height: 17vh;
-      border-radius: 3px;
-      border: 1px solid black;
-      margin: 0px auto; }
-    #place_view form textarea:focus {
-      outline: blue; }
-    #place_view form input[type=submit]:disabled {
-      background-color: #f9f9f9;
-      color: #bbb;
-      border: 1px solid #a6a6a6;
-      font-family: inherit; }
-    #place_view form .submit {
-      display: block;
-      margin: 0 auto;
-      background-color: #158ab4;
-      color: white;
-      font-family: inherit;
-      border: 1px solid #158ab4;
-      border-radius: 10px; }
+      @media (max-width: 420) {
+        #place_view form fieldset span.radio_buttons {
+          display: block; } }
+      #place_view form fieldset legend {
+        background-color: #f9f9f9; }
+      #place_view form fieldset textarea {
+        min-width: 40vw;
+        height: 17vh;
+        border-radius: 3px;
+        border: 1px solid black;
+        margin: 0px auto; }
+      #place_view form fieldset textarea:focus {
+        outline: blue; }
+      #place_view form fieldset input[type=submit]:disabled {
+        background-color: #f9f9f9;
+        color: #bbb;
+        border: 1px solid #a6a6a6;
+        font-family: inherit; }
+      #place_view form fieldset .submit {
+        display: block;
+        margin: 0 auto;
+        background-color: #158ab4;
+        color: white;
+        font-family: inherit;
+        border: 1px solid #158ab4;
+        border-radius: 10px; }
   #place_view #form-section {
     width: 80%;
     display: block;

@@ -140,6 +140,18 @@ header {
   text-align: center;
   width: 100%;
   outline: none; }
+  #buttons .left {
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #a6a6a6;
+    border-right: 0px;
+    margin-left: .25em; }
+  #buttons .right {
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #a6a6a6;
+    margin-right: .25em; }
+  #buttons .active {
+    background-color: #158ab4;
+    color: white; }
   #buttons button {
     background-color: #f9f9f9;
     color: #333;
@@ -147,27 +159,8 @@ header {
     #buttons button:hover {
       background-color: #158ab4;
       color: white; }
-    #buttons button:active {
-      outline: none; }
     #buttons button:focus {
       outline: none; }
-    #buttons button .left {
-      border-radius: 10px 0 0 10px;
-      border: 1px solid #a6a6a6;
-      border-right: 0px;
-      margin-left: .25em; }
-    #buttons button .right {
-      border-radius: 0 10px 10px 0;
-      border: 1px solid #a6a6a6;
-      margin-right: .25em; }
-    #buttons button .active {
-      background-color: #158ab4;
-      color: white;
-      outline: none; }
-    #buttons button .left .active {
-      box-shadow: inset 1px 1px 2.5px 1px rgba(79, 79, 79, 0.75); }
-    #buttons button .right .active {
-      box-shadow: inset -1px 1px 2.5px 1px rgba(79, 79, 79, 0.75); }
 
 #info {
   width: 100%;

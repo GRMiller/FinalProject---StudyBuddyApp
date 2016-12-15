@@ -26,6 +26,7 @@
 #buttons {
   text-align: center;
   width: 100%;
+  outline:none;
   button {
     background-color: #f9f9f9;
     color: #333;
@@ -33,6 +34,9 @@
     &:hover {
       background-color: rgb(21, 138, 180);
       color:white;
+    }
+    &:active {
+      outline:none;
     }
   }
   .left {
@@ -49,5 +53,12 @@
   .active {
     background-color: rgb(21, 138, 180);
     color:white;
+    outline:none;
+  }
+  .left .active {
+    box-shadow: inset 1px 1px 2.5px 1px rgba(79,79,79,.75);
+  }
+  .right .active {
+    box-shadow: inset -1px 1px 2.5px 1px rgba(79,79,79,.75);
   }
 }

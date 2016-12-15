@@ -21,7 +21,7 @@
   </div>
 
   <body>
-    <header class="index_nav">
+    <header class="{{class}}" ng-controller="navCtrl">
       <nav>
         <a id="nav_about" href="#/about">About</a>
 
@@ -32,13 +32,25 @@
       </nav>
 
       <form ng-controller="searchCtrl">
-        <input type="text" ng-model="userText.term" placeholder="Keywords" /> <span id="plus_sign"><img alt="plus sign image" src="images/plus-sign.png" /></span>
-        <input type="text" ng-model="userText.location" placeholder="Location" />
+      <div id="input_container">
+        <label for="keywords">
+            <span>Find:</span>
+            <input type="text" id="keywords" ng-model="userText.term" placeholder="Try libraries, coffee, ..." />
+        </label>
+        <span id="plus_sign">
+          <img alt="plus sign image" src="images/plus-sign.png" />
+        </span>
+        <label for="location">
+          <span>Near:</span>
+          <input type="text" ng-model="userText.location" placeholder="Location" />
+        </label>
+
         <input id="submit_btn" class="submit" type="submit" value="Get Results" ng-click="userSearch(userText)"></input>
+        </div>
       </form>
     </header>
 
-    <section ng-controller="indexCtrl" class="view" ng-hide="hidden">
+    <section class="view" ng-controller="indexCtrl" ng-hide="hidden">
       <ng-view></ng-view>
     </section>
 
@@ -59,6 +71,7 @@
   <script type="text/javascript" src="js/displayCommentsCtrl.js"></script>
   <script type="text/javascript" src="js/commentsService.js"></script>
   <script type="text/javascript" src="js/timeService.js"></script>
+  <script type="text/javascript" src="js/navCtrl.js"></script>
 
   </body>
 </html>

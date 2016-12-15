@@ -44,7 +44,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 //Concatenate script files task
-gulp.task("concat", ['compress']function() {
+gulp.task("concat", function() {
 gulp.src([
   "./public/lib/angular/angular.min.js",
   "./public/lib/angular/angular-route.min.js",

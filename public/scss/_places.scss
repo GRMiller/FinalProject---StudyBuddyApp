@@ -54,22 +54,35 @@
     fieldset {
       background-color: #f9f9f9;
       border-color: #a6a6a6;
-      legend {
-        background-color: #f9f9f9;
+      label.radio_label{
+        display:block;
+        line-height:1.5em;
+        // @media (max-width:420px) {
+        //   text-align:center;
+        // }
       }
-      textarea {
-        min-width: 50vw;
-        height: 20vh;
+      span.radio_buttons {
+        display:block;
       }
+    }
+    legend {
+      background-color: #f9f9f9;
+    }
+    textarea {
+      min-width: 40vw;
+      height: 17vh;
+      border-radius: 3px;
+      border:1px solid black;
+      margin: 0px auto;
+    }
+    textarea:focus {
+      outline:blue;
     }
     input[type=submit]:disabled {
       background-color: #f9f9f9;
       color: #bbb;
       border: 1px solid #a6a6a6;
       font-family: inherit;
-    }
-    input[type=radio] {
-      color: red;
     }
     .submit {
       @include center;
@@ -84,4 +97,5 @@
     width: 80%;
     @include center;
   }
+
 }

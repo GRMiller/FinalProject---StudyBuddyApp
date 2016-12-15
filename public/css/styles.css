@@ -141,8 +141,7 @@ header {
       background-color: #158ab4;
       color: white; }
     #buttons button:active {
-      outline: none;
-    }
+      outline: none; }
     #buttons button:focus {
       outline: none; }
   #buttons .left {
@@ -275,18 +274,26 @@ header {
     #place_view form fieldset {
       background-color: #f9f9f9;
       border-color: #a6a6a6; }
-      #place_view form fieldset legend {
-        background-color: #f9f9f9; }
-      #place_view form fieldset textarea {
-        min-width: 50vw;
-        height: 20vh; }
+      #place_view form fieldset label.radio_label {
+        display: block;
+        line-height: 1.5em; }
+      #place_view form fieldset span.radio_buttons {
+        display: block; }
+    #place_view form legend {
+      background-color: #f9f9f9; }
+    #place_view form textarea {
+      min-width: 40vw;
+      height: 17vh;
+      border-radius: 3px;
+      border: 1px solid black;
+      margin: 0px auto; }
+    #place_view form textarea:focus {
+      outline: blue; }
     #place_view form input[type=submit]:disabled {
       background-color: #f9f9f9;
       color: #bbb;
       border: 1px solid #a6a6a6;
       font-family: inherit; }
-    #place_view form input[type=radio] {
-      color: red; }
     #place_view form .submit {
       display: block;
       margin: 0 auto;
@@ -313,6 +320,10 @@ header {
   position: absolute;
   top: 4%;
   right: 5%; }
+  @media (max-width: 400px) {
+    .index_nav #nav_about {
+      top: 2%;
+      right: 2.5%; } }
 
 .index_nav #title_container {
   margin: 0px auto;
@@ -337,6 +348,9 @@ header {
 .index_nav form {
   margin: 0px auto;
   margin-top: 7em; }
+  @media (max-width: 370px) {
+    .index_nav form {
+      margin-top: 5em; } }
   .index_nav form label {
     font-size: 1.3em;
     border: 0.2px solid black;
@@ -344,11 +358,13 @@ header {
     background-color: rgba(249, 249, 249, 0.75);
     margin: 0px auto;
     padding: 0.5%; }
+    @media (max-width: 420px) {
+      .index_nav form label {
+        font-size: 1em; } }
   .index_nav form input[type=text] {
     border: none;
     background: transparent; }
   .index_nav form input[type=text]:focus {
-    background: #f9f9f9;
     outline: none; }
   .index_nav form input::-webkit-input-placeholder {
     font-family: "PT Sans", sans-serif;

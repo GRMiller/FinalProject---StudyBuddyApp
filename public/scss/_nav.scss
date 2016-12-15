@@ -10,6 +10,10 @@
     position:absolute;
     top: 4%;
     right:5%;
+    @media (max-width:400px) {
+      top:2%;
+      right:2.5%;
+    }
   }
   #title_container {
     margin: 0px auto;
@@ -26,7 +30,6 @@
     @media (max-width: 720px) {
       font-size:3em;
     }
-
   }
   h3 {
     margin:0px auto;
@@ -36,6 +39,9 @@
   form {
     margin:0px auto;
     margin-top:7em;
+    @media (max-width:370px){
+      margin-top:5em;
+    }
     label {
       font-size:1.3em;
       border: 0.2px solid black;
@@ -45,13 +51,15 @@
       // width:15%;
       margin:0px auto;
       padding:0.5%;
+      @media(max-width: 420px) {
+        font-size:1em;
+      }
     }
     input[type=text] {
       border: none;
       background: transparent;
     }
     input[type=text]:focus {
-      background: rgba(249,249,249,1);
       outline:none;
     }
     input::-webkit-input-placeholder {

@@ -3,50 +3,50 @@
   <legend>Fields marked with a * are required</legend>
   <p>*Name:</p>
   <p><input ng-required="true" type="text" name="userName" ng-model="reviews.username" placeholder="Your Name" /></p>
-  <label>*Noise Level:
-    <p>
+  <label class="radio_label">*Noisiness:
+    <span class="radio_buttons">
       <input type="radio" ng-required="true" ng-model="reviews.ratings.noise" name="noiselevel" value="1">
       <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="2">
       <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="3">
       <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="4">
       <input type="radio" ng-model="reviews.ratings.noise" name="noiselevel" value="5">
-    </p>
+    </span>
   </label>
-  <label>*Crowd size:
-    <p>
+  <label class="radio_label">*Crowd size:
+    <span class="radio_buttons">
       <input type="radio" ng-required="true" ng-model="reviews.ratings.crowd" name="crowdsize" value="1">
       <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="2">
       <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="3">
       <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="4">
       <input type="radio" ng-model="reviews.ratings.crowd" name="crowdsize" value="5">
-    </p>
+    </span>
   </label>
-  <label>*Building size:
-    <p>
+  <label class="radio_label">*Building size:
+    <span class="radio_buttons">
       <input type="radio" ng-required="true" ng-model="reviews.ratings.size" name="buildingsize" value="1">
       <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="2">
       <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="3">
       <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="4">
       <input type="radio" ng-model="reviews.ratings.size" name="buildingsize" value="5">
-    </p>
+    </span>
   </label>
-  <label>*Outlet availability:
-    <p>
+  <label class="radio_label">*Outlet availability:
+    <span class="radio_buttons">
       <input type="radio" ng-required="true" ng-model="reviews.ratings.outlets" name="outlets" value="1">
       <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="2">
       <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="3">
       <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="4">
       <input type="radio" ng-model="reviews.ratings.outlets" name="outlets" value="5">
-    </p>
+    </span>
   </label>
-  <label>*Space for groups:
-    <p>
+  <label class="radio_label">*Space for groups:
+    <span class="radio_buttons">
       <input type="radio" ng-required="true" ng-model="reviews.ratings.groups" name="groups" value="1">
       <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="2">
       <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="3">
       <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="4">
       <input type="radio" ng-model="reviews.ratings.groups" name="groups" value="5">
-    </p>
+    </span>
   </label>
   <p>Comment:</p>
   <textarea placeholder="Leave a comment or review!" ng-model="reviews.comment"></textarea>
